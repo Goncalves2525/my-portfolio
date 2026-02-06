@@ -1,6 +1,7 @@
 .skills-main-div {
   display: flex;
   overflow: hidden;
+  margin-bottom: 100px;
 }
 
 .skills-header {
@@ -35,6 +36,7 @@
   font-weight: 400;
   font-family: "Google Sans Regular";
   line-height: normal;
+  text-align: center;
 }
 
 /* Media Query */
