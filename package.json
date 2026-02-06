@@ -2,7 +2,7 @@
   "private": true,
   "name": "myPortfolio",
   "version": "0.1.0",
-  "homepage": "ttps://Goncalves2525.github.io",
+  "homepage": "https://Goncalves2525.github.io",
   "scripts": {
     "build": "react-scripts --openssl-legacy-provider build",
     "predeploy": "npm run build",
