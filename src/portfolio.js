@@ -200,52 +200,13 @@ const skills = {
 const competitiveSites = {
   competitiveSites: [
     {
-      siteName: "LeetCode",
-      iconifyClassname: "simple-icons:leetcode",
+      siteName: "Credly",
+      iconifyClassname: "simple-icons:credly",
       style: {
-        color: "#F79F1B",
+        color: "#f36c1a",
+        fontSize: "7rem",
       },
-      profileLink: "https://leetcode.com/layman_brother/",
-    },
-    {
-      siteName: "HackerRank",
-      iconifyClassname: "simple-icons:hackerrank",
-      style: {
-        color: "#2EC866",
-      },
-      profileLink: "https://www.hackerrank.com/layman_brother",
-    },
-    {
-      siteName: "Codechef",
-      iconifyClassname: "simple-icons:codechef",
-      style: {
-        color: "#5B4638",
-      },
-      profileLink: "https://www.codechef.com/users/ashutosh_1919",
-    },
-    {
-      siteName: "Codeforces",
-      iconifyClassname: "simple-icons:codeforces",
-      style: {
-        color: "#1F8ACB",
-      },
-      profileLink: "http://codeforces.com/profile/layman_brother",
-    },
-    {
-      siteName: "Hackerearth",
-      iconifyClassname: "simple-icons:hackerearth",
-      style: {
-        color: "#323754",
-      },
-      profileLink: "https://www.hackerearth.com/@ashutosh391",
-    },
-    {
-      siteName: "Kaggle",
-      iconifyClassname: "simple-icons:kaggle",
-      style: {
-        color: "#20BEFF",
-      },
-      profileLink: "https://www.kaggle.com/laymanbrother",
+      profileLink: "https://www.credly.com/users/ricardo-goncalves.1e7ec49b/badges#credly",
     },
   ],
 };
@@ -253,146 +214,145 @@ const competitiveSites = {
 const degrees = {
   degrees: [
     {
-      title: "Indian Institute of Information Technology Kurnool",
-      subtitle: "B.Tech. in Computer Engineering",
-      logo_path: "iiitk_logo.png",
-      alt_name: "IIITDM Kurnool",
-      duration: "2016 - 2020",
+      title: "Instituto Superior de Engenharia do Porto",
+      subtitle: "Bachelor's degree in Computer Engineering",
+      logo_path: "isep_logo.png",
+      alt_name: "ISEP Logo",
+      duration: "2022 - 2026",
       descriptions: [
         "⚡ I have studied basic software engineering subjects like DS, Algorithms, DBMS, OS, CA, AI etc.",
         "⚡ Apart from this, I have done courses on Deep Learning, Data Science, Cloud Computing and Full Stack Development.",
         "⚡ I was selected for Merit cum Means Scholarship which is given to top 10% of students in college. I have received award from respected director for consistently best performance in academics.",
       ],
-      website_link: "http://iiitk.ac.in",
-    },
-    {
-      title: "Indiana University Bloomington",
-      subtitle: "M.S. in Computer Science",
-      logo_path: "iu_logo.png",
-      alt_name: "Indiana University Bloomington",
-      duration: "2021 - 2023",
-      descriptions: [
-        "⚡ I have taken varity of courses related to Artificial Intelligence which correspond to Explainable AI, Graph Machine Learning, Computer Vision etc.",
-        "⚡ Apart from this, I have also done research assistantship. As part of it, I have worked on creating new algorithms in Graph ML and Network Science.",
-        "⚡ During my time at university, I was also associated with multimedia department. As part of it, I have worked on some documentry films and interviews.",
-      ],
-      website_link: "https://www.indiana.edu/",
+      website_link: "https://www.isep.ipp.pt/",
     },
   ],
 };
 
-const certifications = {
+const mainCertifications = {
   certifications: [
     {
-      title: "Machine Learning",
-      subtitle: "- Andrew Ng",
-      logo_path: "stanford_logo.png",
+      title: "CCNA",
+      subtitle: "Networking Academy",
+      logo_path: "Cisco_logo_blue.svg.png",
       certificate_link:
-        "https://www.coursera.org/account/accomplishments/verify/22MTSSC5WDTM",
-      alt_name: "Stanford University",
-      color_code: "#8C151599",
+        "https://www.credly.com/badges/c28fd2a6-3df4-4ded-a887-2580efc1de24",
+      alt_name: "Cisco",
     },
     {
-      title: "Deep Learning",
-      subtitle: "- Andrew Ng",
-      logo_path: "deeplearning_ai_logo.png",
+      title: "IT Essentials",
+      subtitle: "Networking Academy",
+      logo_path: "Cisco_logo_blue.svg.png",
       certificate_link:
-        "https://www.coursera.org/account/accomplishments/specialization/H8CPSFXAJD2G",
-      alt_name: "deeplearning.ai",
-      color_code: "#00000099",
+        "https://www.credly.com/earner/earned/badge/e45d48a3-16ed-4db9-84c1-3a16c6b2587f",
+      alt_name: "Cisco",
     },
     {
-      title: "ML on GCP",
-      subtitle: "- GCP Training",
-      logo_path: "google_logo.png",
+      title: "Windows Server Fundamentals",
+      subtitle: "Microsoft Learn",
+      iconifyClassname: "logos:microsoft-icon",
       certificate_link:
-        "https://www.coursera.org/account/accomplishments/specialization/EB4VJARK8647",
-      alt_name: "Google",
-      color_code: "#0C9D5899",
-    },
-    {
-      title: "Data Science",
-      subtitle: "- Alex Aklson",
-      logo_path: "ibm_logo.png",
-      certificate_link:
-        "https://www.coursera.org/account/accomplishments/specialization/PLEAPCSJBZT5",
-      alt_name: "IBM",
-      color_code: "#1F70C199",
-    },
-    {
-      title: "Big Data",
-      subtitle: "- Kim Akers",
-      logo_path: "microsoft_logo.png",
-      certificate_link:
-        "https://drive.google.com/file/d/164zKCFOsI4vGqokc-Qj-e_D00kLDHIrG/view",
+        "https://www.credly.com/earner/earned/badge/0a1148f8-dd22-41db-91a9-fea8b5618303",
       alt_name: "Microsoft",
-      color_code: "#D83B0199",
     },
     {
-      title: "Advanced Data Science",
-      subtitle: "- Romeo Kienzler",
-      logo_path: "ibm_logo.png",
+      title: "Networking Fundamentals",
+      subtitle: "Microsoft Learn",
+      iconifyClassname: "logos:microsoft-icon",
       certificate_link:
-        "https://www.coursera.org/account/accomplishments/verify/BH2T9BRU87BH",
-      alt_name: "IBM",
-      color_code: "#1F70C199",
+        "https://www.credly.com/earner/earned/badge/a3b09317-187a-490e-be01-e57bb49ef0c1",
+      alt_name: "Microsoft",
     },
     {
-      title: "Advanced ML on GCP",
-      subtitle: "- GCP Training",
-      logo_path: "google_logo.png",
+      title: "Security Fundamentals",
+      subtitle: "Microsoft Learn",
+      iconifyClassname: "logos:microsoft-icon",
       certificate_link:
-        "https://www.coursera.org/account/accomplishments/verify/5JZZM7TNQ2AV",
-      alt_name: "Google",
-      color_code: "#0C9D5899",
+        "https://www.credly.com/earner/earned/badge/c16ff9ad-96be-4c5b-a766-6aafdb97a269",
+      alt_name: "Microsoft",
     },
     {
-      title: "DL on Tensorflow",
-      subtitle: "- Laurence Moroney",
-      logo_path: "deeplearning_ai_logo.png",
+      title: "Security Fundamentals",
+      subtitle: "Microsoft Learn",
+      iconifyClassname: "logos:microsoft-icon",
       certificate_link:
-        "https://www.coursera.org/account/accomplishments/verify/6T4DCUGNK8J8",
-      alt_name: "deeplearning.ai",
-      color_code: "#00000099",
+        "https://www.credly.com/earner/earned/badge/c16ff9ad-96be-4c5b-a766-6aafdb97a269",
+      alt_name: "Microsoft",
     },
     {
-      title: "Fullstack Development",
-      subtitle: "- Jogesh Muppala",
-      logo_path: "coursera_logo.png",
+      title: "Windows OS Fundamentals",
+      subtitle: "Microsoft Learn",
+      iconifyClassname: "logos:microsoft-icon",
       certificate_link:
-        "https://www.coursera.org/account/accomplishments/certificate/NRANJA66Y2YA",
-      alt_name: "Coursera",
-      color_code: "#2A73CC",
-    },
-    {
-      title: "Kuberenetes on GCP",
-      subtitle: "- Qwiklabs",
-      logo_path: "gcp_logo.png",
-      certificate_link:
-        "https://google.qwiklabs.com/public_profiles/e4d5a92b-faf6-4679-a70b-a9047c0cd750",
-      alt_name: "GCP",
-      color_code: "#4285F499",
-    },
-    {
-      title: "Cryptography",
-      subtitle: "- Saurabh Mukhopadhyay",
-      logo_path: "nptel_logo.png",
-      certificate_link:
-        "https://drive.google.com/open?id=1z5ExD_QJVdU0slLkp8CBqSF3-C3g-ro_",
-      alt_name: "NPTEL",
-      color_code: "#FFBB0099",
-    },
-    {
-      title: "Cloud Architecture",
-      subtitle: "- Qwiklabs",
-      logo_path: "gcp_logo.png",
-      certificate_link:
-        "https://google.qwiklabs.com/public_profiles/5fab4b2d-be6f-408c-8dcb-6d3b58ecb4a2",
-      alt_name: "GCP",
-      color_code: "#4285F499",
+        "https://www.credly.com/earner/earned/badge/35c8a1cf-15de-4d75-8810-3287e25e4d75",
+      alt_name: "Microsoft",
     },
   ],
 };
+
+const otherCertifications = {
+  certifications: [
+    {
+      title: "Docker",
+      subtitle: "KodeKloud",
+      logo_path: "kodekloud.png",
+      certificate_link:
+        "https://learn.kodekloud.com/user/certificate/a28fa8a4-9c40-4d36-a0bb-a2494d45dbb8",
+      alt_name: "KodeKloud",
+    },
+    {
+      title: "Github Actions",
+      subtitle: "KodeKloud",
+      logo_path: "kodekloud.png",
+      certificate_link:
+        "https://learn.kodekloud.com/user/certificate/5913c42b-3a5d-4c55-a0b3-8cd855554012",
+      alt_name: "KodeKloud",
+    },
+    {
+      title: "Linux",
+      subtitle: "KodeKloud",
+      logo_path: "kodekloud.png",
+      certificate_link:
+        "https://learn.kodekloud.com/user/certificate/bfd9e132-658a-40ae-8436-155fc6bd0d43",
+      alt_name: "KodeKloud",
+    },
+    {
+      title: "Fullstack Web Development",
+      subtitle: "Udemy",
+      iconifyClassname: "simple-icons:udemy",
+      certificate_link:
+        "https://www.udemy.com/certificate/UC-6460fbeb-96a6-4943-bd52-6c53034458e3/",
+      alt_name: "Udemy",
+    },
+    {
+      title: "Flutter",
+      subtitle: "Udemy",
+      iconifyClassname: "simple-icons:udemy",
+      certificate_link:
+        "https://www.udemy.com/certificate/UC-307f60a5-90d9-43cf-bd46-9882a3a50493/",
+      alt_name: "Udemy",
+    },
+    {
+      title: "Python",
+      subtitle: "Udemy",
+      iconifyClassname: "simple-icons:udemy",
+      certificate_link:
+        "https://www.udemy.com/certificate/UC-146829c5-5f18-4b5b-a9d3-c6c2dabf4788/",
+      alt_name: "Udemy",
+    },
+    {
+      title: "Java",
+      subtitle: "Udemy",
+      iconifyClassname: "simple-icons:udemy",
+      certificate_link:
+        "https://www.udemy.com/certificate/UC-570793ca-31f2-4637-8924-eaafa0bd86c1/",
+      alt_name: "Udemy",
+    },
+  ],
+};
+
+// Keep for backwards compatibility
+const certifications = mainCertifications;
 
 // Experience Page
 const experience = {
@@ -636,6 +596,8 @@ export {
   competitiveSites,
   degrees,
   certifications,
+  mainCertifications,
+  otherCertifications,
   experience,
   projectsHeader,
   publicationsHeader,

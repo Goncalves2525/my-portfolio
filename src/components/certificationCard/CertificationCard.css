@@ -22,6 +22,11 @@
   height: 100px;
 }
 
+.logo_img .iconify {
+  font-size: 80px;
+  margin: 10px;
+}
+
 .cert-body {
   margin: 0px;
 }

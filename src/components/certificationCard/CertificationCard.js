@@ -20,11 +20,22 @@ class CertificationCard extends Component {
                 className="cert-header"
                 style={{ backgroundColor: certificate.color_code }}
               >
-                <img
-                  className="logo_img"
-                  src={require(`../../assets/images/${certificate.logo_path}`)}
-                  alt={certificate.alt_name}
-                />
+                {certificate.iconifyClassname ? (
+                  <div className="logo_img">
+                    <span
+                      className="iconify"
+                      data-icon={certificate.iconifyClassname}
+                      style={certificate.iconStyle}
+                      data-inline="false"
+                    ></span>
+                  </div>
+                ) : (
+                  <img
+                    className="logo_img"
+                    src={require(`../../assets/images/${certificate.logo_path}`)}
+                    alt={certificate.alt_name}
+                  />
+                )}
               </div>
               <div className="content-details fadeIn-top">
                 <h3 className="content-title" style={{ color: theme.body }}>
