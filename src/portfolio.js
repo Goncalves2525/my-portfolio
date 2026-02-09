@@ -367,7 +367,7 @@ const experience = {
       work: true,
       experiences: [
         {
-          title: "System Administration",
+          title: "System Administrator",
           company: "Portuguese Army",
           company_url: "https://www.exercito.pt/pt/",
           logo_path: "army.png",
