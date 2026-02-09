@@ -406,6 +406,31 @@ const projectsHeader = {
   avatar_image_path: "projects_image.svg",
 };
 
+const projects = {
+  data: [
+    // Adiciona aqui os teus projetos
+    // Exemplo:
+    // {
+    //   id: "1",
+    //   name: "Nome do Projeto",
+    //   createdAt: "2025-01-01T00:00:00Z",
+    //   url: "https://github.com/username/project",
+    //   description: "Descrição do projeto",
+    //   isFork: false,
+    //   languages: [
+    //     {
+    //       name: "JavaScript",
+    //       iconifyClass: "logos-javascript"
+    //     },
+    //     {
+    //       name: "React",
+    //       iconifyClass: "logos-react"
+    //     }
+    //   ]
+    // }
+  ],
+};
+
 const publicationsHeader = {
   title: "Publications",
   description: "Some of my published Articles, Blogs and Research.",
@@ -483,6 +508,7 @@ export {
   otherCertifications,
   experience,
   projectsHeader,
+  projects,
   publicationsHeader,
   publications,
   contactPageData,
