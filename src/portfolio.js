@@ -415,7 +415,7 @@ const projects = {
         {
           id: "1",
           name: "Gestor-QR",
-          createdAt: "2025-12",
+          createdAt: "2025",
           url: "https://github.com/Goncalves2525/gestor-qr",
           description:
             "A simple app to manage your stock with qr codes focused on best CI/CD practices.",
@@ -487,31 +487,52 @@ const projects = {
       projects: [
         {
           id: "1",
-          name: "Epidemiological Simulation",
-          createdAt: "2022",
+          name: "Surgical Appointment and Resource Management System",
+          createdAt: "2024",
           description:
-            "Epidemiological simulator using the SEIR model (Susceptible-Exposed-Infectious-Recovered) with differential equations.",
-          url: "https://github.com/Goncalves2525/epidemiological-simulation",
+            "Solution for managing surgical appointments, operation requests, patient records, and resource allocation in healthcare facilities. It includes features for 3D visualization of hospital floors, optimal scheduling of surgeries, and GDPR compliance.",
+          url:
+            "https://github.com/Goncalves2525/Surgical-Appointment-and-Resource-Management-System",
+          categories: ["Web"],
+          languages: [
+            {
+              name: ".NET",
+              iconifyClass: "skill-icons:dotnet",
+            },
+            {
+              name: "Angular",
+              iconifyClass: "skill-icons:angular-light",
+              style: { color: "#03589b" },
+            },
+            {
+              name: "Prolog",
+              iconifyClass: "devicon:prolog",
+            },
+          ],
+        },
+        {
+          id: "2",
+          name: "Talent Acquisition Management System",
+          createdAt: "2024",
+          description:
+            "Optimized processes related to the selection and recruitment of candidates",
+          url:
+            "https://github.com/Goncalves2525/Jobs4U-Talent-Acquisition-Management-System",
           categories: ["Desktop"],
           languages: [
             {
               name: "Java",
               iconifyClass: "skill-icons:java-dark",
             },
-          ],
-        },
-        {
-          id: "2",
-          name: "Real Estate Management System",
-          createdAt: "2023",
-          description:
-            "Real estate management application for a fictional company called 'Real Estate USA'",
-          url: "https://github.com/Goncalves2525/real-estate-management-system",
-          categories: ["Desktop"],
-          languages: [
             {
-              name: "Java",
-              iconifyClass: "skill-icons:java-dark",
+              name: "C",
+              iconifyClass: "streamline-logos:c-language-logo-solid",
+              style: { color: "#03589b" },
+            },
+            {
+              name: "C++",
+              iconifyClass: "streamline-logos:c-plus-language-logo-solid",
+              style: { color: "#03589b" },
             },
           ],
         },
@@ -542,52 +563,31 @@ const projects = {
         },
         {
           id: "4",
-          name: "Talent Acquisition Management System",
-          createdAt: "2024",
+          name: "Real Estate Management System",
+          createdAt: "2023",
           description:
-            "Optimized processes related to the selection and recruitment of candidates",
-          url:
-            "https://github.com/Goncalves2525/Jobs4U-Talent-Acquisition-Management-System",
+            "Real estate management application for a fictional company called 'Real Estate USA'",
+          url: "https://github.com/Goncalves2525/real-estate-management-system",
           categories: ["Desktop"],
           languages: [
             {
               name: "Java",
               iconifyClass: "skill-icons:java-dark",
             },
-            {
-              name: "C",
-              iconifyClass: "streamline-logos:c-language-logo-solid",
-              style: { color: "#03589b" },
-            },
-            {
-              name: "C++",
-              iconifyClass: "streamline-logos:c-plus-language-logo-solid",
-              style: { color: "#03589b" },
-            },
           ],
         },
         {
           id: "5",
-          name: "Surgical Appointment and Resource Management System",
-          createdAt: "2024",
+          name: "Epidemiological Simulation",
+          createdAt: "2022",
           description:
-            "Solution for managing surgical appointments, operation requests, patient records, and resource allocation in healthcare facilities. It includes features for 3D visualization of hospital floors, optimal scheduling of surgeries, and GDPR compliance.",
-          url:
-            "https://github.com/Goncalves2525/Surgical-Appointment-and-Resource-Management-System",
-          categories: ["Web"],
+            "Epidemiological simulator using the SEIR model (Susceptible-Exposed-Infectious-Recovered) with differential equations.",
+          url: "https://github.com/Goncalves2525/epidemiological-simulation",
+          categories: ["Desktop"],
           languages: [
             {
-              name: ".NET",
-              iconifyClass: "skill-icons:dotnet",
-            },
-            {
-              name: "Angular",
-              iconifyClass: "skill-icons:angular-light",
-              style: { color: "#03589b" },
-            },
-            {
-              name: "Prolog",
-              iconifyClass: "devicon:prolog",
+              name: "Java",
+              iconifyClass: "skill-icons:java-dark",
             },
           ],
         },
