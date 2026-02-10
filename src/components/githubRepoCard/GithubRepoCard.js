@@ -3,7 +3,7 @@ import ProjectLanguages from "../../components/projectLanguages/ProjectLanguages
 import "./GithubRepoCard.css";
 import { Fade } from "react-reveal";
 
-export default function GithubRepoCard({ repo, theme, category }) {
+export default function GithubRepoCard({ repo, theme, categories }) {
   function openRepoinNewTab(url) {
     var win = window.open(url, "_blank");
     win.focus();
@@ -14,6 +14,11 @@ export default function GithubRepoCard({ repo, theme, category }) {
     const catLower = cat.toLowerCase();
     return `category-tag category-${catLower}`;
   };
+
+  // Support both single category (string) and multiple categories (array)
+  const categoryArray = categories
+    ? (Array.isArray(categories) ? categories : [categories])
+    : [];
 
   return (
     <div className="repo-card-div" style={{ backgroundColor: theme.highlight }}>
@@ -38,8 +43,14 @@ export default function GithubRepoCard({ repo, theme, category }) {
                 {repo.name}
               </p>
             </div>
-            {category && (
-              <span className={getCategoryClass(category)}>{category}</span>
+            {categoryArray.length > 0 && (
+              <div className="category-tags-wrapper">
+                {categoryArray.map((cat, index) => (
+                  <span key={index} className={getCategoryClass(cat)}>
+                    {cat}
+                  </span>
+                ))}
+              </div>
             )}
           </div>
           <p className="repo-description" style={{ color: theme.text }}>

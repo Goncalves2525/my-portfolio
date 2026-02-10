@@ -15,37 +15,20 @@ class ProjectsAccordion extends Component {
                 {section["title"]}
               </h2>
 
-              {/* Check if section has subsections (Personal Projects with DevOps/Web/Mobile) */}
-              {section["subsections"] ? (
-                <div className="repo-cards-div-main">
-                  {section["subsections"].map((subsection) => {
-                    return subsection["projects"].map((project) => {
-                      return (
-                        <GithubRepoCard
-                          repo={project}
-                          theme={theme}
-                          category={subsection["title"]}
-                          key={project.id}
-                        />
-                      );
-                    });
+              {/* Render all projects with their categories */}
+              <div className="repo-cards-div-main">
+                {section["projects"] &&
+                  section["projects"].map((project) => {
+                    return (
+                      <GithubRepoCard
+                        repo={project}
+                        theme={theme}
+                        categories={project.categories}
+                        key={project.id}
+                      />
+                    );
                   })}
-                </div>
-              ) : (
-                /* If no subsections, render projects directly (Academic Projects) */
-                <div className="repo-cards-div-main">
-                  {section["projects"] &&
-                    section["projects"].map((project) => {
-                      return (
-                        <GithubRepoCard
-                          repo={project}
-                          theme={theme}
-                          key={project.id}
-                        />
-                      );
-                    })}
-                </div>
-              )}
+              </div>
             </div>
           );
         })}

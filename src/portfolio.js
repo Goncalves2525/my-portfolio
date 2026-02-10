@@ -411,50 +411,74 @@ const projects = {
   sections: [
     {
       title: "Personal Projects",
-      subsections: [
+      projects: [
         {
-          title: "DevOps",
-          projects: [
+          id: "1",
+          name: "Gestor-QR",
+          createdAt: "2025-12",
+          url: "https://github.com/Goncalves2525/gestor-qr",
+          description:
+            "A simple app to manage your stock with qr codes focused on best CI/CD practices.",
+          categories: ["DevOps", "Web"],
+          isFork: false,
+          languages: [
             {
-              id: "1",
-              name: "Gestor-QR",
-              createdAt: "2025-12",
-              url: "https://github.com/Goncalves2525/gestor-qr",
-              description:
-                "A simple app to manage your stock with qr codes focused on best CI/CD practices.",
-              isFork: false,
-              languages: [
-                {
-                  name: "TypeScript",
-                  iconifyClass: "logos:typescript-icon",
-                },
-                {
-                  name: "Next.js",
-                  iconifyClass: "vscode-icons:file-type-next",
-                },
-                {
-                  name: "Github Actions",
-                  iconifyClass: "devicon:githubactions",
-                },
-                {
-                  name: "Supabase",
-                  iconifyClass: "devicon:supabase",
-                },
-                {
-                  name: "Vercel",
-                  iconifyClass: "devicon:vercel",
-                },
-              ],
+              name: "TypeScript",
+              iconifyClass: "logos:typescript-icon",
+            },
+            {
+              name: "Next.js",
+              iconifyClass: "vscode-icons:file-type-next",
+            },
+            {
+              name: "Github Actions",
+              iconifyClass: "devicon:githubactions",
+            },
+            {
+              name: "Supabase",
+              iconifyClass: "devicon:supabase",
+            },
+            {
+              name: "Vercel",
+              iconifyClass: "devicon:vercel",
             },
           ],
         },
         {
-          title: "Web",
-          projects: [],
+          id: "2",
+          name: "BMI Calculater",
+          createdAt: "2025",
+          url: "https://github.com/Goncalves2525/bmi-calculater-flutter",
+          description:
+            "A simple and elegant BMI (Body Mass Index) calculator built with Flutter.",
+          categories: ["Mobile"],
+          isFork: false,
+          languages: [
+            {
+              name: "Flutter",
+              iconifyClass: "devicon:flutter",
+            },
+          ],
         },
         {
-          title: "Mobile",
-          projects: [],
+          id: "3",
+          name: "Flash Chat",
+          createdAt: "2025",
+          url: "https://github.com/Goncalves2525/flash-chat-flutter",
+          description:
+            "A modern real-time messaging application built with Flutter and Firebase. ",
+          categories: ["Mobile"],
+          isFork: false,
+          languages: [
+            {
+              name: "Flutter",
+              iconifyClass: "devicon:flutter",
+            },
+            {
+              name: "Firebase",
+              iconifyClass: "logos:firebase-icon",
+            },
+          ],
         },
       ],
     },

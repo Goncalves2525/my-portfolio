@@ -51,6 +51,12 @@
   align-items: center;
 }
 
+.category-tags-wrapper {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
 .category-tag {
   display: inline-block;
   padding: 4px 12px;
