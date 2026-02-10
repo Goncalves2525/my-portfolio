@@ -492,6 +492,7 @@ const projects = {
           description:
             "Epidemiological simulator using the SEIR model (Susceptible-Exposed-Infectious-Recovered) with differential equations.",
           url: "https://github.com/Goncalves2525/epidemiological-simulation",
+          categories: ["Desktop"],
           languages: [
             {
               name: "Java",
@@ -506,6 +507,7 @@ const projects = {
           description:
             "Real estate management application for a fictional company called 'Real Estate USA'",
           url: "https://github.com/Goncalves2525/real-estate-management-system",
+          categories: ["Desktop"],
           languages: [
             {
               name: "Java",
@@ -521,6 +523,7 @@ const projects = {
             "Integrated system to support the management of an agricultural facility in organic production mode",
           url:
             "https://github.com/Goncalves2525/organic-agriculture-management-system",
+          categories: ["Desktop"],
           languages: [
             {
               name: "Java",
@@ -545,6 +548,7 @@ const projects = {
             "Optimized processes related to the selection and recruitment of candidates",
           url:
             "https://github.com/Goncalves2525/Jobs4U-Talent-Acquisition-Management-System",
+          categories: ["Desktop"],
           languages: [
             {
               name: "Java",
@@ -570,6 +574,7 @@ const projects = {
             "Solution for managing surgical appointments, operation requests, patient records, and resource allocation in healthcare facilities. It includes features for 3D visualization of hospital floors, optimal scheduling of surgeries, and GDPR compliance.",
           url:
             "https://github.com/Goncalves2525/Surgical-Appointment-and-Resource-Management-System",
+          categories: ["Web"],
           languages: [
             {
               name: ".NET",
