@@ -41,6 +41,43 @@
 .repo-name-div {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.repo-name-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.category-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: "Google Sans Medium";
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.category-devops {
+  background-color: #ff680033;
+  color: #ff6800;
+  border: 1px solid #ff680066;
+}
+
+.category-web {
+  background-color: #4285f433;
+  color: #4285f4;
+  border: 1px solid #4285f466;
+}
+
+.category-mobile {
+  background-color: #34a85333;
+  color: #34a853;
+  border: 1px solid #34a85366;
 }
 
 .repo-svg {

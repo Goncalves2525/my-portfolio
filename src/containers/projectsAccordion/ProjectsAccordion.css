@@ -1,0 +1,41 @@
+.projects-accord {
+  margin: 50px;
+}
+
+.project-section {
+  margin-bottom: 60px;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-family: "Google Sans Medium";
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.accord-panel {
+  font-family: "Google Sans Regular";
+}
+
+.subsection-panel {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .projects-accord {
+    margin: 20px;
+  }
+
+  .project-section {
+    margin-bottom: 40px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .subsection-panel {
+    margin-bottom: 5px;
+  }
+}

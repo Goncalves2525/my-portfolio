@@ -93,7 +93,7 @@ const socialMediaLinks = [
 
 const skills = {
   data: [
-        {
+    {
       title: "DevOps",
       fileName: "CloudInfraImg",
       skills: [
@@ -192,7 +192,7 @@ const skills = {
           fontAwesomeClassname: "material-icon-theme:claude",
         },
       ],
-    }
+    },
   ],
 };
 
@@ -206,7 +206,8 @@ const competitiveSites = {
         color: "#f36c1a",
         fontSize: "7rem",
       },
-      profileLink: "https://www.credly.com/users/ricardo-goncalves.1e7ec49b/badges#credly",
+      profileLink:
+        "https://www.credly.com/users/ricardo-goncalves.1e7ec49b/badges#credly",
     },
   ],
 };
@@ -407,27 +408,162 @@ const projectsHeader = {
 };
 
 const projects = {
-  data: [
-    // Adiciona aqui os teus projetos
-    // Exemplo:
-    // {
-    //   id: "1",
-    //   name: "Nome do Projeto",
-    //   createdAt: "2025-01-01T00:00:00Z",
-    //   url: "https://github.com/username/project",
-    //   description: "Descrição do projeto",
-    //   isFork: false,
-    //   languages: [
-    //     {
-    //       name: "JavaScript",
-    //       iconifyClass: "logos-javascript"
-    //     },
-    //     {
-    //       name: "React",
-    //       iconifyClass: "logos-react"
-    //     }
-    //   ]
-    // }
+  sections: [
+    {
+      title: "Personal Projects",
+      subsections: [
+        {
+          title: "DevOps",
+          projects: [
+            {
+              id: "1",
+              name: "Gestor-QR",
+              createdAt: "2025-12",
+              url: "https://github.com/Goncalves2525/gestor-qr",
+              description:
+                "A simple app to manage your stock with qr codes focused on best CI/CD practices.",
+              isFork: false,
+              languages: [
+                {
+                  name: "TypeScript",
+                  iconifyClass: "logos:typescript-icon",
+                },
+                {
+                  name: "Next.js",
+                  iconifyClass: "vscode-icons:file-type-next",
+                },
+                {
+                  name: "Github Actions",
+                  iconifyClass: "devicon:githubactions",
+                },
+                {
+                  name: "Supabase",
+                  iconifyClass: "devicon:supabase",
+                },
+                {
+                  name: "Vercel",
+                  iconifyClass: "devicon:vercel",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          title: "Web",
+          projects: [],
+        },
+        {
+          title: "Mobile",
+          projects: [],
+        },
+      ],
+    },
+    {
+      title: "Academic Projects",
+      projects: [
+        {
+          id: "1",
+          name: "Epidemiological Simulation",
+          createdAt: "2022",
+          description:
+            "Epidemiological simulator using the SEIR model (Susceptible-Exposed-Infectious-Recovered) with differential equations.",
+          url: "https://github.com/Goncalves2525/epidemiological-simulation",
+          languages: [
+            {
+              name: "Java",
+              iconifyClass: "skill-icons:java-dark",
+            },
+          ],
+        },
+        {
+          id: "2",
+          name: "Real Estate Management System",
+          createdAt: "2023",
+          description:
+            "Real estate management application for a fictional company called 'Real Estate USA'",
+          url: "https://github.com/Goncalves2525/real-estate-management-system",
+          languages: [
+            {
+              name: "Java",
+              iconifyClass: "skill-icons:java-dark",
+            },
+          ],
+        },
+        {
+          id: "3",
+          name: "Organic Agriculture Management System",
+          createdAt: "2023",
+          description:
+            "Integrated system to support the management of an agricultural facility in organic production mode",
+          url:
+            "https://github.com/Goncalves2525/organic-agriculture-management-system",
+          languages: [
+            {
+              name: "Java",
+              iconifyClass: "skill-icons:java-dark",
+            },
+            {
+              name: "C",
+              iconifyClass: "streamline-logos:c-language-logo-solid",
+              style: { color: "#03589b" },
+            },
+            {
+              name: "Assembly",
+              iconifyClass: "vscode-icons:file-type-assembly",
+            },
+          ],
+        },
+        {
+          id: "4",
+          name: "Talent Acquisition Management System",
+          createdAt: "2024",
+          description:
+            "Optimized processes related to the selection and recruitment of candidates",
+          url:
+            "https://github.com/Goncalves2525/Jobs4U-Talent-Acquisition-Management-System",
+          languages: [
+            {
+              name: "Java",
+              iconifyClass: "skill-icons:java-dark",
+            },
+            {
+              name: "C",
+              iconifyClass: "streamline-logos:c-language-logo-solid",
+              style: { color: "#03589b" },
+            },
+            {
+              name: "C++",
+              iconifyClass: "streamline-logos:c-plus-language-logo-solid",
+              style: { color: "#03589b" },
+            },
+          ],
+        },
+        {
+          id: "5",
+          name: "Surgical Appointment and Resource Management System",
+          createdAt: "2024",
+          description:
+            "Solution for managing surgical appointments, operation requests, patient records, and resource allocation in healthcare facilities. It includes features for 3D visualization of hospital floors, optimal scheduling of surgeries, and GDPR compliance.",
+          url:
+            "https://github.com/Goncalves2525/Surgical-Appointment-and-Resource-Management-System",
+          languages: [
+            {
+              name: ".NET",
+              iconifyClass: "skill-icons:dotnet",
+            },
+            {
+              name: "Angular",
+              iconifyClass: "skill-icons:angular-light",
+              style: { color: "#03589b" },
+            },
+            {
+              name: "Prolog",
+              iconifyClass: "devicon:prolog",
+            },
+          ],
+        },
+      ],
+    },
   ],
 };
 
