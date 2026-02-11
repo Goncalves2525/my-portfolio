@@ -19,6 +19,8 @@ export default function socialMedia(props) {
       {socialMediaLinks
         .filter((media) => media.display !== false)
         .map((media, i) => {
+          // Use iconType if provided, otherwise default to 'fab' (brands)
+          const iconClass = media.iconType === 'solid' ? 'fas' : 'fab';
           return (
             <a
               key={i}
@@ -28,7 +30,7 @@ export default function socialMedia(props) {
               rel="noopener noreferrer"
             >
               <IconWrapper {...media} {...props}>
-                <i className={`fab ${media.fontAwesomeIcon}`}></i>
+                <i className={`${iconClass} ${media.fontAwesomeIcon}`}></i>
               </IconWrapper>
               {/* <span></span> */}
             </a>
