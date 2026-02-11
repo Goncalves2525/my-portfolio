@@ -54,7 +54,7 @@ class Contact extends Component {
               </div>
             </div>
           </Fade>
-          <Fade bottom duration={1000} distance="40px">
+          {/* <Fade bottom duration={1000} distance="40px">
             <div className="blog-heading-div">
               <div className="blog-heading-text-div">
                 <h1 className="blog-heading-text" style={{ color: theme.text }}>
@@ -76,21 +76,13 @@ class Contact extends Component {
                 </div>
               </div>
               <div className="blog-heading-img-div">
-                {/* <img
-											src={require(`../../assets/images/${blogSection["avatar_image_path"]}`)}
-											alt=""
-										/> */}
                 <BlogsImg theme={theme} />
               </div>
             </div>
-          </Fade>
-          <Fade bottom duration={1000} distance="40px">
+          </Fade> */}
+          {/* <Fade bottom duration={1000} distance="40px">
             <div className="address-heading-div">
               <div className="contact-heading-img-div">
-                {/* <img
-											src={require(`../../assets/images/${addressSection["avatar_image_path"]}`)}
-											alt=""
-										/> */}
                 <AddressImg theme={theme} />
               </div>
               <div className="address-heading-text-div">
@@ -128,7 +120,7 @@ class Contact extends Component {
                 </div>
               </div>
             </div>
-          </Fade>
+          </Fade> */}
         </div>
         <Footer theme={this.props.theme} onToggle={this.props.onToggle} />
         <TopButton theme={this.props.theme} />

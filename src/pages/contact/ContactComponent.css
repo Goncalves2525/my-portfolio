@@ -5,6 +5,10 @@
 .basic-contact {
   margin-left: 5%;
   margin-right: 5%;
+  min-height: calc(100vh - 200px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .contact-heading-div {
