@@ -23,7 +23,7 @@ const greeting = {
   logo_name: "Ricardo Gonçalves",
   nickname: "",
   subTitle:
-    "A passionate individual who always thrives to work on end to end products which develop sustainable and scalable social and technical systems to create impact.",
+    "I currently work as a SysAdmin and I'm learning DevOps concepts. I've been exploring technologies such as Docker, Kubernetes, Terraform, Ansible, CI/CD with GitHub Actions, and monitoring with Prometheus. I believe that combining system knowledge with modern DevOps practices is essential to building scalable and efficient solutions.",
   resumeLink:
     "https://drive.google.com/file/d/1rYLM62UCHDwXn4jYb3Ysfkg1y8sEwHak/view?usp=drive_link",
   portfolio_repository: "https://github.com/ashutosh1919/masterPortfolio",
@@ -105,10 +105,10 @@ const skills = {
       title: "DevOps",
       fileName: "CloudInfraImg",
       skills: [
-        "⚡ Experience working on multiple cloud platforms",
-        "⚡ Hosting and maintaining websites on virtual machine instances along with integration of databases",
-        "⚡ Deploying deep learning models on cloud to use on mobile devices",
-        "⚡ Setting up streaming jobs from DB to Server or vice-versa on GCP and AWS",
+        "⚡ Configuring and managing Linux servers for production environments",
+        "⚡ Building CI/CD pipelines with GitHub Actions for automated testing and deployment",
+        "⚡ Containerizing applications with Docker and orchestrating them with Kubernetes",
+        "⚡ Managing cloud infrastructure on AWS",
       ],
       softwareSkills: [
         {
@@ -149,9 +149,10 @@ const skills = {
       title: "Full Stack Development",
       fileName: "FullStackImg",
       skills: [
-        "⚡ Building responsive website front end using React-Redux",
-        "⚡ Developing mobile applications using Flutter, React Native and solo android apps using Kotlin",
-        "⚡ Creating application backend in Node, Express & Flask",
+        "⚡ Building responsive web applications using React, Next.js and TypeScript",
+        "⚡ Styling modern interfaces with Tailwind CSS",
+        "⚡ Creating backend services with Node.js, MongoDB and PostgreSQL",
+        "⚡ Using Claude Code as an AI-powered development assistant",
       ],
       softwareSkills: [
         {
@@ -224,16 +225,17 @@ const degrees = {
   degrees: [
     {
       title: "Instituto Superior de Engenharia do Porto",
-      subtitle: "Bachelor's degree in Computer Engineering",
+      subtitle: "Computer Engineering",
       logo_path: "isep_logo.png",
       alt_name: "ISEP Logo",
-      duration: "2022 - 2026",
+      duration: "2022 - 2025",
       descriptions: [
-        "⚡ I have studied basic software engineering subjects like DS, Algorithms, DBMS, OS, CA, AI etc.",
-        "⚡ Apart from this, I have done courses on Deep Learning, Data Science, Cloud Computing and Full Stack Development.",
-        "⚡ I was selected for Merit cum Means Scholarship which is given to top 10% of students in college. I have received award from respected director for consistently best performance in academics.",
+        "⚡ Studied core subjects including software engineering, databases, data structures, computer architecture, networking and AI.",
+        "⚡ Applied software engineering best practices: SOLID principles, Agile methodologies and clean architecture patterns (Clean, Onion, MVP).",
+        "⚡ Covered the full engineering process from requirements gathering and analysis to design and implementation.",
+        "⚡ Developed skills in systems administration, cybersecurity, project management and data analysis.",
       ],
-      website_link: "https://www.isep.ipp.pt/",
+      website_link: "https://www.isep.ipp.pt/Course/Course/26",
     },
   ],
 };
@@ -368,7 +370,7 @@ const experience = {
   title: "Experience",
   subtitle: "Work and Internship",
   description:
-    "I have worked with many evolving startups as ML and DL Developer, Designer and Software Architect. I have also worked with some well established companies mostly as AI Developer. I love organising events and that is why I am also involved with many opensource communities as a representative.",
+    "I currently work as a System Administrator in the Portuguese Army, managing servers and network infrastructure. I also completed an internship as a Full Stack Developer, building web and mobile applications.",
   header_image_path: "experience.svg",
   sections: [
     {
@@ -383,7 +385,7 @@ const experience = {
           duration: "Febuary 2022 - Present",
           location: "Porto, Portugal",
           description:
-            "Improving ads ranking models on the core TikTok product. Experience working on modeling two-tower architectures like DeepFM, Wide & deep learning, etc. Working on Large Language Models (LLM) pretraining and Large Multi-modal Model (LMM) finetuning strategies.",
+            "Managing and configuring Windows and Linux servers, web applications, fileshares and other services. Managing users and groups in Active Directory. Configuring and managing the network infrastructure.",
           color: "#000000",
         },
       ],
@@ -399,7 +401,7 @@ const experience = {
           duration: "Fev 2025 - Aug 2025",
           location: "Porto, Portugal",
           description:
-            "Building new features on the backend recommendation system, specifically ranking algorithms for Ads that touch hundreds of millions of people around the world. Improving online and offline content ranking algorithms by performing hard sample data replays for training steps.",
+            "Developed a Full Stack Web App and Mobile App for a Condominium Management System. Built the web application using Next.js and Express.js with MongoDB, and the mobile app using React Native.",
           color: "#000000",
         },
       ],
@@ -411,7 +413,7 @@ const experience = {
 const projectsHeader = {
   title: "Projects",
   description:
-    "My projects makes use of vast variety of latest technology tools. My best experience is to create Data Science projects and deploy them to web applications using cloud infrastructure.",
+    "Here are some of my personal and academic projects. They cover areas like DevOps, Full Stack Web Development, Mobile Development and Desktop Applications.",
   avatar_image_path: "projects_image.svg",
 };
 
@@ -642,7 +644,7 @@ const contactPageData = {
     title: "Contact Me",
     profile_image_path: "ricardo.svg",
     description:
-      "I am available on almost every social media. You can message me, I will reply within 24 hours. I can help you with ML, AI, React, Android, Cloud and Opensource Development.",
+      "Feel free to reach out to me for any opportunities or collaborations in DevOps and Web Development. I'll get back to you as soon as possible!",
   },
   blogSection: {
     title: "Blogs",
