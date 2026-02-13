@@ -2,22 +2,29 @@
   padding-left: 0;
   list-style: none;
   font-size: 3rem;
-  margin-bottom: 0px;
-  margin-top: 0px;
-  text-align: center;
+  margin-bottom: 0;
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-4);
 }
 
 .competitive-sites-inline {
-  display: inline-block;
-  margin-right: 20px;
-  margin-bottom: 20px;
-  font-family: "Google Sans Regular";
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-family);
+  transition: transform var(--transition-fast);
+}
+
+.competitive-sites-inline:hover {
+  transform: translateY(-3px);
 }
 
 .competitive-sites-inline > i {
-  color: #868e96;
+  color: #94A3B8;
 }
 
 .competitive-sites-inline > i:hover {
-  color: #645beb;
+  color: #06B6D4;
 }

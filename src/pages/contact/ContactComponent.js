@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 import TopButton from "../../components/topButton/TopButton";
-import SocialMedia from "../../components/socialMedia/SocialMedia";
 import Button from "../../components/button/Button";
 import { Fade } from "react-reveal";
 import "./ContactComponent.css";
@@ -17,7 +16,7 @@ class Contact extends Component {
       <div className="contact-main">
         <Header theme={theme} />
         <div className="basic-contact">
-          <Fade bottom duration={1000} distance="40px">
+          <Fade bottom duration={800} distance="20px">
             <div className="contact-heading-div">
               <div className="contact-heading-img-div">
                 <img
@@ -38,7 +37,6 @@ class Contact extends Component {
                 >
                   {ContactData["description"]}
                 </p>
-                <SocialMedia theme={theme} />
                 <div className="resume-btn-div">
                   <Button
                     text="See My Resume"

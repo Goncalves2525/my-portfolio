@@ -20,7 +20,7 @@ class Projects extends Component {
       <div className="projects-main">
         <Header theme={theme} />
         <div className="basic-projects">
-          <Fade bottom duration={2000} distance="40px">
+          <Fade bottom duration={800} distance="20px">
             <div className="projects-heading-div">
               <div className="projects-heading-img-div">
                 {/* <img
@@ -58,7 +58,7 @@ class Projects extends Component {
         {/* Publications - Hidden for now */}
         {/* {publications.data.length > 0 ? (
           <div className="basic-projects">
-            <Fade bottom duration={2000} distance="40px">
+            <Fade bottom duration={800} distance="20px">
               <div className="publications-heading-div">
                 <div className="publications-heading-text-div">
                   <h1

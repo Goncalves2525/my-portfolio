@@ -1,10 +1,18 @@
 /* header */
 
+.header-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.06);
+  transition: box-shadow var(--transition-base);
+}
+
 .header {
   display: block;
-  max-width: 90%;
-  padding: 20px 10px;
-  margin: 0px auto;
+  padding: var(--space-4) var(--space-6);
 }
 
 .header ul {
@@ -12,43 +20,46 @@
   padding: 0;
   list-style: none;
   overflow: hidden;
-  /* background-color: #fff; */
-}
-.grey-color {
-  color: #868e96;
 }
 
 .header li a {
   display: block;
-  padding: 20px 20px;
-  /* color: black; */
+  padding: var(--space-2) var(--space-4);
   text-decoration: none;
+  font-family: var(--font-family);
+  font-weight: var(--font-medium);
+  font-size: var(--text-base);
+  letter-spacing: 0.01em;
+  border-radius: var(--space-2);
+  transition: transform var(--transition-fast), color var(--transition-fast);
 }
 
-.header li a:hover,
-.header .menu-btn:hover {
-  /* background-color: #A6E1FA; */
+.header li a.nav-link:hover {
+  color: #06B6D4 !important;
+  transform: translateY(-2px);
 }
 
 .header .logo {
-  display: block;
+  display: flex;
+  align-items: center;
   float: left;
-  font-size: 1.5em;
+  font-size: 1.6em;
   text-decoration: none;
-  margin-top: 10px;
+  margin-top: 0;
   line-height: normal;
+  font-weight: var(--font-bold);
 }
+
 .header .logo-name {
   font-family: "Bonheur Royale", cursive;
   font-weight: bold;
-  padding: 0 10px;
-  /* color: #55198b; */
+  padding: 0 6px;
 }
 
 /* menu */
 
 .menu {
-  font-family: "Google Sans Regular";
+  font-family: var(--font-family);
 }
 
 .header .menu {
@@ -69,7 +80,7 @@
 }
 
 .header .menu-icon .navicon {
-  background: #333;
+  background: currentColor;
   display: block;
   height: 2px;
   position: relative;
@@ -79,7 +90,7 @@
 
 .header .menu-icon .navicon:before,
 .header .menu-icon .navicon:after {
-  background: #333;
+  background: currentColor;
   content: "";
   display: block;
   height: 100%;

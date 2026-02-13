@@ -13,7 +13,7 @@ class ExperienceCard extends Component {
         className="experience-list-item"
         style={{ marginTop: index === 0 ? 30 : 50 }}
       >
-        <Fade left duration={2000} distance="40px">
+        <Fade left duration={800} distance="20px">
           <div className="experience-card-logo-div">
             <img
               className="experience-card-logo"
@@ -44,15 +44,15 @@ class ExperienceCard extends Component {
             />
           )}
         </div>
-        <Fade right duration={2000} distance="40px">
+        <Fade right duration={800} distance="20px">
           <div style={{ display: "flex", flexDirection: "row" }}>
             <div
               className="arrow-left"
-              style={{ borderRight: `10px solid ${theme.body}` }}
+              style={{ borderRight: `10px solid ${theme.cardBackground || theme.highlight}` }}
             ></div>
             <div
               className="experience-card"
-              style={{ background: `${theme.body}` }}
+              style={{ background: theme.cardBackground || theme.highlight }}
             >
               <div
                 style={{
@@ -103,6 +103,7 @@ class ExperienceCard extends Component {
                   display: "flex",
                   justifyContent: "flex-start",
                   marginTop: 20,
+                  color: theme.secondaryText,
                 }}
               >
                 <div className="repo-description" />

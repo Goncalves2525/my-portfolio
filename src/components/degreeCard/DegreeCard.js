@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./DegreeCard.css";
+import "../button/Button.css";
 import { Fade, Flip } from "react-reveal";
 
 class DegreeCard extends Component {
@@ -9,7 +10,7 @@ class DegreeCard extends Component {
     return (
       <div className="degree-card">
         {degree.logo_path && (
-          <Flip left duration={2000}>
+          <Flip left duration={1000}>
             <div className="card-img">
               <img
                 style={{
@@ -23,7 +24,7 @@ class DegreeCard extends Component {
             </div>
           </Flip>
         )}
-        <Fade right duration={2000} distance="40px">
+        <Fade right duration={800} distance="20px">
           <div
             className="card-body"
             style={{ width: degree.logo_path ? "90%" : "100%" }}
@@ -59,15 +60,16 @@ class DegreeCard extends Component {
                   href={degree.website_link}
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="main-button visit-btn-link"
+                  style={{
+                    color: theme.buttonText || theme.body,
+                    backgroundColor: theme.buttonPrimary || theme.text,
+                    border: `solid 1px ${theme.buttonPrimary || theme.text}`,
+                    "--btn-text": theme.buttonPrimary || theme.text,
+                    "--btn-bg": theme.body,
+                  }}
                 >
-                  <div
-                    className="visit-btn"
-                    style={{ backgroundColor: degree.headerColor || theme.headerColor }}
-                  >
-                    <p className="btn" style={{ color: theme.text }}>
-                      Visit Website
-                    </p>
-                  </div>
+                  Visit Website
                 </a>
               )}
             </div>

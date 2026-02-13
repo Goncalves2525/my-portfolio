@@ -330,7 +330,8 @@ const otherCertifications = {
     {
       title: "Fullstack Web Development",
       subtitle: "Udemy",
-      iconifyClassname: "simple-icons:udemy",
+      iconifyClassname: "logos:udemy-icon",
+      iconStyle: { color: "#A435F0" },
       certificate_link:
         "https://www.udemy.com/certificate/UC-6460fbeb-96a6-4943-bd52-6c53034458e3/",
       alt_name: "Udemy",
@@ -338,7 +339,8 @@ const otherCertifications = {
     {
       title: "Flutter",
       subtitle: "Udemy",
-      iconifyClassname: "simple-icons:udemy",
+      iconifyClassname: "logos:udemy-icon",
+      iconStyle: { color: "#A435F0" },
       certificate_link:
         "https://www.udemy.com/certificate/UC-307f60a5-90d9-43cf-bd46-9882a3a50493/",
       alt_name: "Udemy",
@@ -346,7 +348,8 @@ const otherCertifications = {
     {
       title: "Python",
       subtitle: "Udemy",
-      iconifyClassname: "simple-icons:udemy",
+      iconifyClassname: "logos:udemy-icon",
+      iconStyle: { color: "#A435F0" },
       certificate_link:
         "https://www.udemy.com/certificate/UC-146829c5-5f18-4b5b-a9d3-c6c2dabf4788/",
       alt_name: "Udemy",
@@ -354,7 +357,8 @@ const otherCertifications = {
     {
       title: "Java",
       subtitle: "Udemy",
-      iconifyClassname: "simple-icons:udemy",
+      iconifyClassname: "logos:udemy-icon",
+      iconStyle: { color: "#A435F0" },
       certificate_link:
         "https://www.udemy.com/certificate/UC-570793ca-31f2-4637-8924-eaafa0bd86c1/",
       alt_name: "Udemy",
@@ -647,22 +651,21 @@ const contactPageData = {
       "Feel free to reach out to me for any opportunities or collaborations in DevOps and Web Development. I'll get back to you as soon as possible!",
   },
   blogSection: {
-    title: "Blogs",
-    subtitle:
-      "I like to document some of my experiences in professional career journey as well as some technical knowledge sharing.",
-    link: "https://blogs.ashutoshhathidara.com/",
-    avatar_image_path: "blogs_image.svg",
+    title: "",
+    subtitle: "",
+    link: "",
+    avatar_image_path: "",
   },
   addressSection: {
-    title: "Address",
-    subtitle: "Saratoga Ave, San Jose, CA, USA 95129",
-    locality: "San Jose",
-    country: "USA",
-    region: "California",
-    postalCode: "95129",
-    streetAddress: "Saratoga Avenue",
-    avatar_image_path: "address_image.svg",
-    location_map_link: "https://maps.app.goo.gl/NvYZqa34Wye4tpS17",
+    title: "",
+    subtitle: "",
+    locality: "",
+    country: "",
+    region: "",
+    postalCode: "",
+    streetAddress: "",
+    avatar_image_path: "",
+    location_map_link: "",
   },
   phoneSection: {
     title: "",

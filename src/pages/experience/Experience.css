@@ -9,6 +9,8 @@
 
 .experience-heading-div {
   display: flex;
+  padding-top: var(--space-16);
+  margin-bottom: var(--space-12);
 }
 
 .experience-heading-div > * {
@@ -28,61 +30,76 @@
 .experience-heading-img-div > * {
   max-width: 100%;
   height: auto;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
 }
 
 .experience-heading-text {
-  font-size: 56px;
-  font-weight: 400;
-  font-family: "Google Sans Medium";
+  font-size: var(--text-5xl);
+  font-weight: var(--font-bold);
+  font-family: var(--font-family);
   line-height: 1.1;
   text-align: center;
-  margin-top: 80px;
+  margin-top: var(--space-16);
+  letter-spacing: -0.02em;
 }
 
 .experience-heading-sub-text {
-  font-size: 30px;
-  font-family: "Google Sans Regular";
+  font-size: var(--text-2xl);
+  font-family: var(--font-family);
+  font-weight: var(--font-medium);
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: var(--space-3);
 }
 
 .experience-header-detail-text {
-  font-size: 20px;
-  line-height: 30px;
-  margin-top: 0px;
-  margin-left: 20px;
-  margin-right: 20px;
-  font-family: "Google Sans Medium";
+  font-size: var(--text-base);
+  line-height: 1.7;
+  margin-top: 0;
+  margin-left: var(--space-6);
+  margin-right: var(--space-6);
+  font-family: var(--font-family);
+  font-weight: var(--font-normal);
 }
 
-@media (max-width: 1380px) {
+@media (max-width: 1200px) {
   .experience-heading-text {
-    font-size: 50px;
-    margin-top: 80px;
+    font-size: var(--text-4xl);
+    margin-top: var(--space-12);
   }
   .experience-heading-sub-text {
-    font-size: 25px;
+    font-size: var(--text-xl);
   }
 }
 
 @media (max-width: 768px) {
   .experience-heading-text {
-    font-size: 30px;
-    margin-top: 20px;
+    font-size: var(--text-3xl);
+    margin-top: var(--space-6);
   }
 
   .experience-heading-sub-text {
-    font-size: 20px;
+    font-size: var(--text-lg);
   }
 
   .experience-heading-div {
     flex-direction: column;
+    padding-top: var(--space-8);
   }
 
   .experience-header-detail-text {
-    font-size: 16px;
-    margin-right: 0px;
-    line-height: normal;
+    font-size: var(--text-sm);
+    margin-right: 0;
+    margin-left: 0;
+    line-height: 1.6;
     text-align: center;
   }
 }

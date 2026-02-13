@@ -1,28 +1,34 @@
 .certs-header {
-  font-size: 40px;
-  line-height: 1.1;
-  font-family: "Google Sans Regular";
+  font-size: var(--text-3xl);
+  line-height: 1.2;
+  font-family: var(--font-family);
+  font-weight: var(--font-bold);
   text-align: center;
+  margin-bottom: var(--space-8);
 }
 
 .certs-body-div {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
 }
 
-@media (max-width: 1380px) {
+@media (max-width: 1200px) {
+  .certs-body-div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .certs-header {
-    font-size: 35px;
+    font-size: var(--text-2xl);
   }
 }
 
 @media (max-width: 768px) {
   .certs-body-div {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 
   .certs-header {
-    font-size: 30px;
+    font-size: var(--text-2xl);
   }
 }
