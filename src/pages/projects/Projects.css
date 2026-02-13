@@ -10,6 +10,8 @@
 
 .projects-heading-div {
   display: flex;
+  padding-top: var(--space-16);
+  margin-bottom: var(--space-12);
 }
 
 .projects-heading-div > * {
@@ -29,6 +31,16 @@
 .projects-heading-img-div > * {
   max-width: 100%;
   height: auto;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
 }
 
 .projects-heading-text {
@@ -100,6 +112,7 @@
 
   .projects-heading-div {
     flex-direction: column;
+    padding-top: var(--space-8);
   }
 
   .projects-header-detail-text {

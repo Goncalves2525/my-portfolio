@@ -9,6 +9,8 @@
 
 .experience-heading-div {
   display: flex;
+  padding-top: var(--space-16);
+  margin-bottom: var(--space-12);
 }
 
 .experience-heading-div > * {
@@ -28,6 +30,16 @@
 .experience-heading-img-div > * {
   max-width: 100%;
   height: auto;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
 }
 
 .experience-heading-text {
@@ -80,6 +92,7 @@
 
   .experience-heading-div {
     flex-direction: column;
+    padding-top: var(--space-8);
   }
 
   .experience-header-detail-text {
