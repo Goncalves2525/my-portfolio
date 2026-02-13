@@ -33,7 +33,12 @@
   font-size: var(--text-sm);
   letter-spacing: 0.01em;
   border-radius: var(--space-2);
-  transition: background var(--transition-fast), color var(--transition-fast);
+  transition: transform var(--transition-fast), color var(--transition-fast);
+}
+
+.header li a.nav-link:hover {
+  color: #06B6D4 !important;
+  transform: translateY(-2px);
 }
 
 .header .logo {

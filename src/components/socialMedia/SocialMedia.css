@@ -23,6 +23,7 @@
   width: 2.4rem;
   position: relative;
   text-align: center;
+  color: white;
   user-select: none;
   transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }

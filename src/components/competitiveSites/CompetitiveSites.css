@@ -4,13 +4,15 @@
   font-size: 3rem;
   margin-bottom: 0;
   margin-top: 0;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-4);
 }
 
 .competitive-sites-inline {
-  display: inline-block;
-  margin-right: var(--space-4);
-  margin-bottom: var(--space-4);
+  display: inline-flex;
+  align-items: center;
   font-family: var(--font-family);
   transition: transform var(--transition-fast);
 }

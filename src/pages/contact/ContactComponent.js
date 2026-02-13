@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 import TopButton from "../../components/topButton/TopButton";
-import SocialMedia from "../../components/socialMedia/SocialMedia";
 import Button from "../../components/button/Button";
 import { Fade } from "react-reveal";
 import "./ContactComponent.css";
@@ -38,7 +37,6 @@ class Contact extends Component {
                 >
                   {ContactData["description"]}
                 </p>
-                <SocialMedia theme={theme} />
                 <div className="resume-btn-div">
                   <Button
                     text="See My Resume"

@@ -20,6 +20,8 @@
 .main-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(6, 182, 212, 0.3);
+  color: var(--btn-text) !important;
+  background-color: var(--btn-bg) !important;
 }
 
 .main-button:active {

@@ -330,7 +330,8 @@ const otherCertifications = {
     {
       title: "Fullstack Web Development",
       subtitle: "Udemy",
-      iconifyClassname: "simple-icons:udemy",
+      iconifyClassname: "logos:udemy-icon",
+      iconStyle: { color: "#A435F0" },
       certificate_link:
         "https://www.udemy.com/certificate/UC-6460fbeb-96a6-4943-bd52-6c53034458e3/",
       alt_name: "Udemy",
@@ -338,7 +339,8 @@ const otherCertifications = {
     {
       title: "Flutter",
       subtitle: "Udemy",
-      iconifyClassname: "simple-icons:udemy",
+      iconifyClassname: "logos:udemy-icon",
+      iconStyle: { color: "#A435F0" },
       certificate_link:
         "https://www.udemy.com/certificate/UC-307f60a5-90d9-43cf-bd46-9882a3a50493/",
       alt_name: "Udemy",
@@ -346,7 +348,8 @@ const otherCertifications = {
     {
       title: "Python",
       subtitle: "Udemy",
-      iconifyClassname: "simple-icons:udemy",
+      iconifyClassname: "logos:udemy-icon",
+      iconStyle: { color: "#A435F0" },
       certificate_link:
         "https://www.udemy.com/certificate/UC-146829c5-5f18-4b5b-a9d3-c6c2dabf4788/",
       alt_name: "Udemy",
@@ -354,7 +357,8 @@ const otherCertifications = {
     {
       title: "Java",
       subtitle: "Udemy",
-      iconifyClassname: "simple-icons:udemy",
+      iconifyClassname: "logos:udemy-icon",
+      iconStyle: { color: "#A435F0" },
       certificate_link:
         "https://www.udemy.com/certificate/UC-570793ca-31f2-4637-8924-eaafa0bd86c1/",
       alt_name: "Udemy",
