@@ -12,12 +12,7 @@ class Header extends Component {
     return (
       <Fade top duration={600} distance="10px">
         <SeoHeader />
-        <div
-          className="header-wrapper"
-          style={{
-            backgroundColor: `${theme.body}dd`,
-          }}
-        >
+        <div className="header-wrapper">
           <header className="header">
             <NavLink to={link} tag={Link} className="logo">
               <span style={{ color: theme.imageHighlight }}> &lt;</span>
@@ -30,7 +25,7 @@ class Header extends Component {
             <label className="menu-icon" htmlFor="menu-btn">
               <span className="navicon"></span>
             </label>
-            <ul className="menu" style={{ backgroundColor: theme.body }}>
+            <ul className="menu">
               <li>
                 <NavLink
                   to="/home"

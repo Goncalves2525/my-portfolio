@@ -12,9 +12,7 @@
 
 .header {
   display: block;
-  max-width: var(--max-width);
   padding: var(--space-4) var(--space-6);
-  margin: 0 auto;
 }
 
 .header ul {
@@ -30,7 +28,7 @@
   text-decoration: none;
   font-family: var(--font-family);
   font-weight: var(--font-medium);
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   letter-spacing: 0.01em;
   border-radius: var(--space-2);
   transition: transform var(--transition-fast), color var(--transition-fast);
@@ -45,7 +43,7 @@
   display: flex;
   align-items: center;
   float: left;
-  font-size: 1.4em;
+  font-size: 1.6em;
   text-decoration: none;
   margin-top: 0;
   line-height: normal;
