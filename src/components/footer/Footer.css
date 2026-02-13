@@ -1,10 +1,14 @@
-.footer-text {
+.footer-div {
+  margin-top: var(--space-16);
+  padding: var(--space-10) var(--space-6);
   text-align: center;
-  /* color: #868e96; */
-  font-weight: bold;
-  font-family: "Google Sans Regular";
+  border-top: 1px solid rgba(148, 163, 184, 0.08);
 }
 
-.footer-div {
-  margin-top: 2rem;
+.footer-text {
+  text-align: center;
+  font-weight: var(--font-medium);
+  font-family: var(--font-family);
+  font-size: var(--text-sm);
+  margin: 0;
 }

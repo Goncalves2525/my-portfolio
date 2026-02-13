@@ -9,7 +9,7 @@ class DegreeCard extends Component {
     return (
       <div className="degree-card">
         {degree.logo_path && (
-          <Flip left duration={2000}>
+          <Flip left duration={1000}>
             <div className="card-img">
               <img
                 style={{
@@ -23,7 +23,7 @@ class DegreeCard extends Component {
             </div>
           </Flip>
         )}
-        <Fade right duration={2000} distance="40px">
+        <Fade right duration={800} distance="20px">
           <div
             className="card-body"
             style={{ width: degree.logo_path ? "90%" : "100%" }}

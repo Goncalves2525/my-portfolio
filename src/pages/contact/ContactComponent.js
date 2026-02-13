@@ -17,7 +17,7 @@ class Contact extends Component {
       <div className="contact-main">
         <Header theme={theme} />
         <div className="basic-contact">
-          <Fade bottom duration={1000} distance="40px">
+          <Fade bottom duration={800} distance="20px">
             <div className="contact-heading-div">
               <div className="contact-heading-img-div">
                 <img

@@ -20,9 +20,14 @@ class Header extends Component {
     const theme = this.props.theme;
     const link = settings.isSplash ? "/splash" : "home";
     return (
-      <Fade top duration={1000} distance="20px">
+      <Fade top duration={600} distance="10px">
         <SeoHeader />
-        <div>
+        <div
+          className="header-wrapper"
+          style={{
+            backgroundColor: `${theme.body}dd`,
+          }}
+        >
           <header className="header">
             <NavLink to={link} tag={Link} className="logo">
               <span style={{ color: theme.text }}> &lt;</span>

@@ -21,7 +21,7 @@
 
 .address-heading-div {
   display: flex;
-  margin-top: 80px;
+  margin-top: var(--space-16);
 }
 
 .blog-heading-div > * {
@@ -70,46 +70,50 @@
 }
 
 .contact-heading-text {
-  font-size: 56px;
-  font-weight: 400;
-  font-family: "Google Sans Medium";
+  font-size: var(--text-5xl);
+  font-weight: var(--font-bold);
+  font-family: var(--font-family);
   line-height: 1.1;
   text-align: center;
-  margin-top: 60px;
+  margin-top: var(--space-12);
+  letter-spacing: -0.02em;
 }
 
 .blog-heading-text {
-  font-size: 56px;
-  font-weight: 400;
-  font-family: "Google Sans Medium";
+  font-size: var(--text-5xl);
+  font-weight: var(--font-bold);
+  font-family: var(--font-family);
   line-height: 1.1;
   text-align: center;
-  margin-top: 40px;
+  margin-top: var(--space-10);
 }
 
 .address-heading-text {
-  font-size: 30px;
-  font-family: "Google Sans Regular";
+  font-size: var(--text-2xl);
+  font-family: var(--font-family);
+  font-weight: var(--font-medium);
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: var(--space-3);
 }
 
 .contact-header-detail-text {
-  font-size: 20px;
-  line-height: 30px;
-  margin-top: 0px;
-  margin-left: 20px;
-  margin-right: 20px;
-  font-family: "Google Sans Medium";
+  font-size: var(--text-base);
+  line-height: 1.7;
+  margin-top: 0;
+  margin-left: var(--space-6);
+  margin-right: var(--space-6);
+  font-family: var(--font-family);
+  font-weight: var(--font-normal);
 }
 
 .blog-header-detail-text {
-  font-size: 20px;
-  line-height: 30px;
-  margin-top: 0px;
-  margin-left: 20px;
-  margin-right: 20px;
-  font-family: "Google Sans Medium";
+  font-size: var(--text-base);
+  line-height: 1.7;
+  margin-top: 0;
+  margin-left: var(--space-6);
+  margin-right: var(--space-6);
+  font-family: var(--font-family);
+  font-weight: var(--font-normal);
 }
 
 .resume-btn-div {
@@ -131,49 +135,49 @@
   margin-top: 0;
 }
 
-@media (max-width: 1380px) {
+@media (max-width: 1200px) {
   .contact-heading-text {
-    font-size: 50px;
-    margin-top: 60px;
+    font-size: var(--text-4xl);
+    margin-top: var(--space-10);
   }
 
   .blog-heading-text {
-    font-size: 50px;
-    margin-top: 40px;
+    font-size: var(--text-4xl);
+    margin-top: var(--space-8);
   }
 }
 
 @media (max-width: 768px) {
   .contact-heading-text {
-    font-size: 30px;
-    margin-top: 0px;
+    font-size: var(--text-3xl);
+    margin-top: 0;
   }
 
   .blog-heading-text {
-    font-size: 30px;
-    margin-top: 0px;
+    font-size: var(--text-3xl);
+    margin-top: 0;
   }
 
   .address-heading-text {
-    font-size: 20px;
+    font-size: var(--text-lg);
   }
 
   .blog-heading-div {
     flex-direction: column-reverse;
-    margin-top: 60px;
+    margin-top: var(--space-12);
   }
 
   .address-heading-div {
     flex-direction: column;
-    margin-top: 60px;
+    margin-top: var(--space-12);
   }
 
   .blog-heading-text-div {
-    margin-top: 40px;
+    margin-top: var(--space-10);
   }
 
   .address-heading-text-div {
-    margin-top: 40px;
+    margin-top: var(--space-10);
   }
 
   .contact-heading-div {
@@ -181,18 +185,18 @@
   }
 
   .contact-header-detail-text {
-    font-size: 16px;
-    margin-left: 0px;
-    margin-right: 0px;
-    line-height: normal;
+    font-size: var(--text-sm);
+    margin-left: 0;
+    margin-right: 0;
+    line-height: 1.6;
     text-align: center;
   }
 
   .blog-header-detail-text {
-    font-size: 16px;
-    margin-left: 0px;
-    margin-right: 0px;
-    line-height: normal;
+    font-size: var(--text-sm);
+    margin-left: 0;
+    margin-right: 0;
+    line-height: 1.6;
     text-align: center;
   }
 }

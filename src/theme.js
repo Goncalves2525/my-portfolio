@@ -195,4 +195,33 @@ export const materialTealTheme = {
   splashBg: "#05505E",
 };
 
-export const chosenTheme = blueTheme;
+export const darkNavyTheme = {
+  // Core colors
+  body: "#0F172A",
+  text: "#F1F5F9",
+  expTxtColor: "#F1F5F9",
+  highlight: "#164E63",
+  dark: "#020617",
+  secondaryText: "#94A3B8",
+  imageHighlight: "#06B6D4",
+  compImgHighlight: "#1E293B",
+  jacketColor: "#0E7490",
+  headerColor: "#06B6D477",
+  splashBg: "#020617",
+
+  // New design tokens
+  cardBackground: "#1E293B",
+  cardBorder: "rgba(148, 163, 184, 0.08)",
+  cardShadow: "0 4px 24px rgba(0, 0, 0, 0.25)",
+  cardShadowHover: "0 12px 40px rgba(0, 0, 0, 0.35)",
+  navBackground: "rgba(15, 23, 42, 0.85)",
+  navShadow: "0 1px 12px rgba(0, 0, 0, 0.15)",
+  buttonPrimary: "#06B6D4",
+  buttonPrimaryHover: "#22D3EE",
+  buttonText: "#0F172A",
+  borderRadius: "12px",
+  footerBackground: "#020617",
+  footerText: "#06B6D4",
+};
+
+export const chosenTheme = darkNavyTheme;

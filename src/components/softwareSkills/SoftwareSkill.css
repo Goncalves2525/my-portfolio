@@ -1,27 +1,42 @@
 .dev-icons {
   padding-left: 0;
   list-style: none;
-  font-size: 3rem;
-  margin-bottom: 0px;
-  margin-top: 0px;
-  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: var(--space-4);
+  margin-top: var(--space-2);
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
 }
 
 .software-skill-inline {
-  display: inline-block;
-  margin-right: 20px;
-  margin-bottom: 20px;
-  font-family: "Google Sans Regular";
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  font-family: var(--font-family);
+  transition: transform var(--transition-fast);
+}
+
+.software-skill-inline:hover {
+  transform: translateY(-3px);
 }
 
 .software-skill-inline > i {
-  color: #868e96;
+  color: #94A3B8;
 }
 
 .software-skill-inline > i:hover {
-  color: #645beb;
+  color: #06B6D4;
 }
 
 .skill-image {
   height: 48px;
+}
+
+@media (max-width: 768px) {
+  .dev-icons {
+    justify-content: center;
+    text-align: center;
+  }
 }

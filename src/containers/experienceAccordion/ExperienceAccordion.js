@@ -20,10 +20,10 @@ class ExperienceAccordion extends Component {
                     style: () => ({
                       backgroundColor: `${theme.body}`,
                       border: `1px solid`,
-                      borderRadius: `5px`,
-                      borderColor: `${theme.headerColor}`,
+                      borderRadius: `var(--space-3)`,
+                      borderColor: `${theme.cardBorder || theme.headerColor}`,
                       marginBottom: `3px`,
-                      fontFamily: "Google Sans Regular",
+                      fontFamily: "var(--font-family)",
                       color: `${theme.text}`,
                       ":hover": {
                         color: `${theme.secondaryText}`,

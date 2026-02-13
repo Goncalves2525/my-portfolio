@@ -1,87 +1,85 @@
 .skills-main-div {
   display: flex;
+  align-items: center;
   overflow: hidden;
-  margin-bottom: 100px;
+  margin-bottom: var(--space-16);
+  gap: var(--space-12);
 }
 
 .skills-header {
-  font-size: 60px;
-  line-height: normal;
-  font-family: "Google Sans Regular";
+  font-size: var(--text-5xl);
+  line-height: 1.1;
+  font-family: var(--font-family);
+  font-weight: var(--font-bold);
   text-align: center;
+  margin-bottom: var(--space-12);
 }
 
 .skills-text {
-  font-size: 20px;
+  font-size: var(--text-base);
+  line-height: 1.7;
+  font-family: var(--font-family);
 }
 
 .skills-text-div {
-  margin-left: 50px;
-  font-family: "Google Sans Regular";
+  margin-left: 0;
+  font-family: var(--font-family);
 }
 
 .skills-main-div > * {
   flex: 1;
-  margin-bottom: 30px;
+  margin-bottom: 0;
 }
 
 .skills-image-div > * {
   max-width: 100%;
   height: auto;
-  margin-top: 100px;
+  margin-top: 0;
 }
 
 .skills-heading {
-  font-size: 56px;
-  font-weight: 400;
-  font-family: "Google Sans Regular";
-  line-height: normal;
-  text-align: center;
+  font-size: var(--text-4xl);
+  font-weight: var(--font-bold);
+  font-family: var(--font-family);
+  line-height: 1.2;
+  text-align: left;
+  margin-bottom: var(--space-4);
 }
 
 /* Media Query */
-@media (max-width: 1380px) {
+@media (max-width: 1200px) {
   .skills-heading {
-    font-size: 40px;
+    font-size: var(--text-3xl);
   }
   .skills-header {
-    font-size: 50px;
+    font-size: var(--text-4xl);
   }
-  /* .skills-image-div > img {
-    margin-top: 0px;
-  } */
 }
+
 @media (max-width: 768px) {
   .skills-heading {
-    font-size: 30px;
+    font-size: var(--text-2xl);
     text-align: center;
   }
   .skills-header {
-    font-size: 30px;
-  }
-  .greeting-text-p {
-    font-size: 16px;
-    line-height: normal;
+    font-size: var(--text-3xl);
   }
   .skills-main-div {
     flex-direction: column;
+    gap: var(--space-6);
+    margin-bottom: var(--space-10);
   }
   .skills-text-div {
-    margin-left: 0px;
-    margin: 20px;
+    margin: var(--space-4);
   }
   .skills-text {
-    font-size: 16px;
+    font-size: var(--text-sm);
   }
   .skills-text-subtitle {
-    font-size: 16px;
+    font-size: var(--text-sm);
     text-align: center;
   }
   .skills-image-div {
-    /* display: none; */
     order: 2;
-  }
-  .skills-image-div > * {
-    margin-top: 0px;
   }
 }
