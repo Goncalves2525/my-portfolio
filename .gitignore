@@ -25,5 +25,4 @@ yarn-error.log*
 !/package-lock.json
 
 # Claude instructions
-CLAUDE.md
 .claude
