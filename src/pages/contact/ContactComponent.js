@@ -5,115 +5,185 @@ import TopButton from "../../components/topButton/TopButton";
 import Button from "../../components/button/Button";
 import { Fade } from "react-reveal";
 import "./ContactComponent.css";
-import { contactPageData } from "../../portfolio.js";
+import { contactPageData, greeting } from "../../portfolio.js";
+import myResumePdf from "../../assets/docs/CV-Ricardo-Goncalves-2026.pdf";
+import { Document, Page, pdfjs } from "react-pdf";
+
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 const ContactData = contactPageData.contactSection;
 
 class Contact extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      pageWidth: null,
+      numPages: null,
+      currentPage: 1,
+      isLoading: true,
+      error: null,
+    };
+  }
+
+  componentDidMount() {
+    this.setPageWidth();
+    window.addEventListener("resize", this.setPageWidth);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.setPageWidth);
+  }
+
+  setPageWidth = () => {
+    const width = window.innerWidth;
+    let pageWidth;
+    if (width > 1200) {
+      pageWidth = 930;
+    } else if (width > 768) {
+      pageWidth = 700;
+    } else {
+      pageWidth = width * 0.9;
+    }
+    this.setState({ pageWidth });
+  };
+
+  onDocumentLoadSuccess = ({ numPages }) => {
+    this.setState({ numPages, isLoading: false, error: null });
+  };
+
+  onDocumentLoadError = (error) => {
+    console.error("Error loading PDF:", error);
+    this.setState({
+      error: "Failed to load resume. Please try again later.",
+      isLoading: false,
+    });
+  };
+
+  goToPreviousPage = () => {
+    this.setState((prev) => ({
+      currentPage: Math.max(prev.currentPage - 1, 1),
+    }));
+  };
+
+  goToNextPage = () => {
+    this.setState((prev) => ({
+      currentPage: Math.min(prev.currentPage + 1, prev.numPages),
+    }));
+  };
+
   render() {
     const theme = this.props.theme;
+    const { pageWidth, numPages, currentPage, isLoading, error } = this.state;
+
     return (
       <div className="contact-main">
         <Header theme={theme} />
         <div className="basic-contact">
           <Fade bottom duration={800} distance="20px">
-            <div className="contact-heading-div">
-              <div className="contact-heading-img-div">
-                <img
-                  src={require(`../../assets/images/${ContactData["profile_image_path"]}`)}
-                  alt=""
-                />
-              </div>
-              <div className="contact-heading-text-div">
-                <h1
-                  className="contact-heading-text"
-                  style={{ color: theme.text }}
-                >
-                  {ContactData["title"]}
-                </h1>
-                <p
-                  className="contact-header-detail-text subTitle"
-                  style={{ color: theme.secondaryText }}
-                >
-                  {ContactData["description"]}
-                </p>
-                <div className="resume-btn-div">
-                  <Button
-                    text="See My Resume"
-                    href="/resume"
-                    theme={theme}
-                  />
-                </div>
-              </div>
+            <div className="contact-heading-text-div">
+              <h1
+                className="contact-heading-text"
+                style={{ color: theme.text }}
+              >
+                {ContactData["title"]}
+              </h1>
+              <p
+                className="contact-header-detail-text subTitle"
+                style={{ color: theme.secondaryText }}
+              >
+                {ContactData["description"]}
+              </p>
             </div>
           </Fade>
-          {/* <Fade bottom duration={1000} distance="40px">
-            <div className="blog-heading-div">
-              <div className="blog-heading-text-div">
-                <h1 className="blog-heading-text" style={{ color: theme.text }}>
-                  {blogSection["title"]}
-                </h1>
-                <p
-                  className="blog-header-detail-text subTitle"
-                  style={{ color: theme.secondaryText }}
-                >
-                  {blogSection["subtitle"]}
-                </p>
-                <div className="blogsite-btn-div">
-                  <Button
-                    text="Visit My Blogsite"
-                    newTab={true}
-                    href={blogSection.link}
-                    theme={theme}
-                  />
+
+          <Fade bottom duration={800} distance="20px">
+            <div className="contact-resume-section">
+              <div className="contact-download-btn">
+                <Button
+                  text="Download Resume"
+                  newTab={true}
+                  href={greeting.resumeLink}
+                  theme={theme}
+                />
+              </div>
+
+              {isLoading && !error && (
+                <div className="resume-loading">
+                  <div className="loading-spinner"></div>
+                  <p style={{ color: theme.secondaryText }}>
+                    Loading resume...
+                  </p>
                 </div>
-              </div>
-              <div className="blog-heading-img-div">
-                <BlogsImg theme={theme} />
-              </div>
-            </div>
-          </Fade> */}
-          {/* <Fade bottom duration={1000} distance="40px">
-            <div className="address-heading-div">
-              <div className="contact-heading-img-div">
-                <AddressImg theme={theme} />
-              </div>
-              <div className="address-heading-text-div">
-                <h1
-                  className="address-heading-text"
-                  style={{ color: theme.text }}
-                >
-                  {addressSection["title"]}
-                </h1>
-                <p
-                  className="contact-header-detail-text subTitle"
-                  style={{ color: theme.secondaryText }}
-                >
-                  {addressSection["subtitle"]}
-                </p>
-                <h1
-                  className="address-heading-text"
-                  style={{ color: theme.text }}
-                >
-                  {phoneSection["title"]}
-                </h1>
-                <p
-                  className="contact-header-detail-text subTitle"
-                  style={{ color: theme.secondaryText }}
-                >
-                  {phoneSection["subtitle"]}
-                </p>
-                <div className="address-btn-div">
-                  <Button
-                    text="Visit on Google Maps"
-                    newTab={true}
-                    href={addressSection.location_map_link}
-                    theme={theme}
-                  />
+              )}
+
+              {error && (
+                <div className="resume-error">
+                  <p style={{ color: theme.secondaryText }}>{error}</p>
+                  <button
+                    onClick={() => window.location.reload()}
+                    className="retry-btn"
+                  >
+                    Try Again
+                  </button>
                 </div>
-              </div>
+              )}
+
+              {!error && (
+                <div className="resume-page">
+                  <Document
+                    file={myResumePdf}
+                    onLoadSuccess={this.onDocumentLoadSuccess}
+                    onLoadError={this.onDocumentLoadError}
+                    loading={
+                      <div className="resume-loading">
+                        <div className="loading-spinner"></div>
+                        <p style={{ color: theme.secondaryText }}>
+                          Loading resume...
+                        </p>
+                      </div>
+                    }
+                  >
+                    {pageWidth && (
+                      <Page
+                        pageNumber={currentPage}
+                        width={pageWidth}
+                        loading={
+                          <div className="page-loading">
+                            <div className="loading-spinner"></div>
+                          </div>
+                        }
+                      />
+                    )}
+                  </Document>
+
+                  {numPages && numPages > 1 && (
+                    <div className="pagination-controls">
+                      <button
+                        onClick={this.goToPreviousPage}
+                        disabled={currentPage === 1}
+                        className="pagination-btn"
+                      >
+                        ← Previous
+                      </button>
+                      <span
+                        className="page-info"
+                        style={{ color: theme.secondaryText }}
+                      >
+                        Page {currentPage} of {numPages}
+                      </span>
+                      <button
+                        onClick={this.goToNextPage}
+                        disabled={currentPage === numPages}
+                        className="pagination-btn"
+                      >
+                        Next →
+                      </button>
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
-          </Fade> */}
+          </Fade>
         </div>
         <Footer theme={this.props.theme} onToggle={this.props.onToggle} />
         <TopButton theme={this.props.theme} />
