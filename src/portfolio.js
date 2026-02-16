@@ -9,11 +9,11 @@ const settings = {
 const seo = {
   title: "Ricardo's Portfolio",
   description:
-    "A passionate individual who always thrives to work on end to end products which develop sustainable and scalable social and technical systems to create impact.",
+    "System Administrator and aspiring DevOps engineer with experience in Docker, Kubernetes, Terraform, and CI/CD. Based in Porto, Portugal.",
   og: {
     title: "Ricardo Gonçalves Portfolio",
     type: "website",
-    url: "http://ricardogoncalves.com/",
+    url: "https://ricardo-goncalves.vercel.app/",
   },
 };
 
