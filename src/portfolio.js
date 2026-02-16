@@ -283,14 +283,6 @@ const mainCertifications = {
       alt_name: "Microsoft",
     },
     {
-      title: "Security Fundamentals",
-      subtitle: "Microsoft Learn",
-      iconifyClassname: "logos:microsoft-icon",
-      certificate_link:
-        "https://www.credly.com/earner/earned/badge/c16ff9ad-96be-4c5b-a766-6aafdb97a269",
-      alt_name: "Microsoft",
-    },
-    {
       title: "Windows OS Fundamentals",
       subtitle: "Microsoft Learn",
       iconifyClassname: "logos:microsoft-icon",
