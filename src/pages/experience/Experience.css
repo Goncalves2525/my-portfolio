@@ -70,6 +70,21 @@
   font-weight: var(--font-normal);
 }
 
+.experience-section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  margin-bottom: var(--space-16);
+}
+
+.experience-section-title {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-bold);
+  font-family: var(--font-family);
+  text-align: center;
+  margin-bottom: var(--space-8);
+  letter-spacing: -0.02em;
+}
+
 @media (max-width: 1200px) {
   .experience-heading-text {
     font-size: var(--text-4xl);
@@ -101,5 +116,14 @@
     margin-left: 0;
     line-height: 1.6;
     text-align: center;
+  }
+
+  .experience-section {
+    margin-bottom: var(--space-10);
+  }
+
+  .experience-section-title {
+    font-size: var(--text-2xl);
+    margin-bottom: var(--space-6);
   }
 }
