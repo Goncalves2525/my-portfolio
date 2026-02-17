@@ -4,6 +4,7 @@ import { Fade } from "react-reveal";
 import { NavLink, Link } from "react-router-dom";
 import { greeting, settings } from "../../portfolio.js";
 import SeoHeader from "../seoHeader/SeoHeader";
+import ThemeToggle from "../themeToggle/ThemeToggle";
 
 class Header extends Component {
   render() {
@@ -25,12 +26,15 @@ class Header extends Component {
             <label className="menu-icon" htmlFor="menu-btn">
               <span className="navicon"></span>
             </label>
+            <div className="header-toggle-wrapper">
+              <ThemeToggle />
+            </div>
             <ul className="menu">
               <li>
                 <NavLink
                   to="/home"
                   tag={Link}
-                  activeStyle={{ fontWeight: "bold", color: "#06B6D4" }}
+                  activeStyle={{ fontWeight: "bold", color: theme.imageHighlight }}
                   className="nav-link"
                   style={{ color: theme.secondaryText }}
                 >
@@ -41,7 +45,7 @@ class Header extends Component {
                 <NavLink
                   to="/education"
                   tag={Link}
-                  activeStyle={{ fontWeight: "bold", color: "#06B6D4" }}
+                  activeStyle={{ fontWeight: "bold", color: theme.imageHighlight }}
                   className="nav-link"
                   style={{ color: theme.secondaryText }}
                 >
@@ -52,7 +56,7 @@ class Header extends Component {
                 <NavLink
                   to="/experience"
                   tag={Link}
-                  activeStyle={{ fontWeight: "bold", color: "#06B6D4" }}
+                  activeStyle={{ fontWeight: "bold", color: theme.imageHighlight }}
                   className="nav-link"
                   style={{ color: theme.secondaryText }}
                 >
@@ -63,29 +67,18 @@ class Header extends Component {
                 <NavLink
                   to="/projects"
                   tag={Link}
-                  activeStyle={{ fontWeight: "bold", color: "#06B6D4" }}
+                  activeStyle={{ fontWeight: "bold", color: theme.imageHighlight }}
                   className="nav-link"
                   style={{ color: theme.secondaryText }}
                 >
                   Projects
                 </NavLink>
               </li>
-              {/* <li>
-                <NavLink
-                  to="/opensource"
-                  tag={Link}
-                  activeStyle={{ fontWeight: "bold", color: "#06B6D4" }}
-                  className="nav-link"
-                  style={{ color: theme.secondaryText }}
-                >
-                  Open Source
-                </NavLink>
-              </li> */}
               <li>
                 <NavLink
                   to="/contact"
                   tag={Link}
-                  activeStyle={{ fontWeight: "bold", color: "#06B6D4" }}
+                  activeStyle={{ fontWeight: "bold", color: theme.imageHighlight }}
                   className="nav-link"
                   style={{ color: theme.secondaryText }}
                 >

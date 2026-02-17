@@ -72,6 +72,13 @@ body {
 
   /* Scrollbar */
   --scrollbar-color: white;
+
+  /* Theme-aware accent color */
+  --accent-color: #06B6D4;
+}
+
+[data-theme="day"] {
+  --accent-color: #0284C7;
 }
 
 * {

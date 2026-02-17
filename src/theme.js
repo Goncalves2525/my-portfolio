@@ -224,4 +224,33 @@ export const darkNavyTheme = {
   footerText: "#06B6D4",
 };
 
+export const dayTheme = {
+  // Core colors — sky blue gradient
+  body: "#A3C4F3",
+  text: "#1E293B",
+  expTxtColor: "#1E293B",
+  highlight: "#BFDBFE",
+  dark: "#C5DEFA",
+  secondaryText: "#475569",
+  imageHighlight: "#0284C7",
+  compImgHighlight: "#F1F5F9",
+  jacketColor: "#0369A1",
+  headerColor: "#0284C777",
+  splashBg: "#0C4A6E",
+
+  // Design tokens
+  cardBackground: "#FFFFFF",
+  cardBorder: "rgba(148, 163, 184, 0.15)",
+  cardShadow: "0 4px 24px rgba(0, 0, 0, 0.06)",
+  cardShadowHover: "0 12px 40px rgba(0, 0, 0, 0.10)",
+  navBackground: "rgba(232, 244, 253, 0.85)",
+  navShadow: "0 1px 12px rgba(0, 0, 0, 0.06)",
+  buttonPrimary: "#0284C7",
+  buttonPrimaryHover: "#0369A1",
+  buttonText: "#FFFFFF",
+  borderRadius: "12px",
+  footerBackground: "#DBEAFE",
+  footerText: "#0284C7",
+};
+
 export const chosenTheme = darkNavyTheme;

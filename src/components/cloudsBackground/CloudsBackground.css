@@ -1,0 +1,75 @@
+/* Clouds Background — day mode only */
+
+.clouds-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+[data-theme="day"] .clouds-container {
+  opacity: 1;
+}
+
+.cloud {
+  position: absolute;
+  left: -250px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50px;
+  animation-name: driftRight;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* Cloud puff shapes via pseudo-elements */
+.cloud::before,
+.cloud::after {
+  content: "";
+  position: absolute;
+  background: inherit;
+  border-radius: 50%;
+}
+
+.cloud::before {
+  width: 50%;
+  height: 130%;
+  top: -40%;
+  left: 15%;
+}
+
+.cloud::after {
+  width: 40%;
+  height: 110%;
+  top: -30%;
+  right: 20%;
+}
+
+@keyframes driftRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(100vw + 500px));
+  }
+}
+
+/* Reduce clouds on mobile */
+@media (max-width: 768px) {
+  .cloud:nth-child(2n) {
+    display: none;
+  }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .cloud {
+    animation: none;
+    left: 20%;
+  }
+}
