@@ -6,12 +6,14 @@ import "./Resume.css";
 import myResumePdf from "../../assets/docs/CV-Ricardo-Goncalves-2026.pdf";
 import { Document, Page, pdfjs } from "react-pdf";
 import Button from "../../components/button/Button";
-import { greeting } from "../../portfolio";
+import { LanguageContext } from "../../context/LanguageContext";
+import { withTranslation } from "react-i18next";
 import TopButton from "../../components/topButton/TopButton";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
-export default class ResumePage extends Component {
+class ResumePage extends Component {
+  static contextType = LanguageContext;
   constructor(props) {
     super(props);
     this.state = {
@@ -77,6 +79,8 @@ export default class ResumePage extends Component {
 
   render() {
     const theme = this.props.theme;
+    const { t } = this.props;
+    const { portfolio } = this.context;
     const { pageWidth, numPages, currentPage, isLoading, error } = this.state;
 
     return (
@@ -88,9 +92,9 @@ export default class ResumePage extends Component {
               {/* Download Button */}
               <div className="download-btn">
                 <Button
-                  text="📃 Download Resume"
+                  text={`📃 ${t("buttons.downloadResume")}`}
                   newTab={true}
-                  href={greeting.resumeLink}
+                  href={portfolio.greeting.resumeLink}
                   theme={theme}
                 />
               </div>
@@ -99,7 +103,7 @@ export default class ResumePage extends Component {
               {isLoading && !error && (
                 <div className="resume-loading">
                   <div className="loading-spinner"></div>
-                  <p>Loading resume...</p>
+                  <p>{t("contact.loadingResume")}</p>
                 </div>
               )}
 
@@ -127,7 +131,7 @@ export default class ResumePage extends Component {
                     className="retry-btn"
                     aria-label="Reload resume"
                   >
-                    Try Again
+                    {t("buttons.tryAgain")}
                   </button>
                 </div>
               )}
@@ -142,7 +146,7 @@ export default class ResumePage extends Component {
                     loading={
                       <div className="resume-loading">
                         <div className="loading-spinner"></div>
-                        <p>Loading resume...</p>
+                        <p>{t("contact.loadingResume")}</p>
                       </div>
                     }
                   >
@@ -168,10 +172,10 @@ export default class ResumePage extends Component {
                         className="pagination-btn"
                         aria-label="Previous page"
                       >
-                        ← Previous
+                        ← {t("buttons.previous")}
                       </button>
                       <span className="page-info" aria-live="polite">
-                        Page {currentPage} of {numPages}
+                        {t("contact.pageInfo", { current: currentPage, total: numPages })}
                       </span>
                       <button
                         onClick={this.goToNextPage}
@@ -179,7 +183,7 @@ export default class ResumePage extends Component {
                         className="pagination-btn"
                         aria-label="Next page"
                       >
-                        Next →
+                        {t("buttons.next")} →
                       </button>
                     </div>
                   )}
@@ -194,3 +198,5 @@ export default class ResumePage extends Component {
     );
   }
 }
+
+export default withTranslation()(ResumePage);

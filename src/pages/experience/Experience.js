@@ -4,13 +4,16 @@ import Footer from "../../components/footer/Footer";
 import TopButton from "../../components/topButton/TopButton";
 import ExperienceCard from "../../components/experienceCard/ExperienceCard.js";
 import "./Experience.css";
-import { experience } from "../../portfolio.js";
+import { LanguageContext } from "../../context/LanguageContext";
 import { Fade } from "react-reveal";
 import ExperienceImg from "./ExperienceImg";
 
 class Experience extends Component {
+  static contextType = LanguageContext;
   render() {
     const theme = this.props.theme;
+    const { portfolio } = this.context;
+    const { experience } = portfolio;
     return (
       <div className="experience-main">
         <Header theme={theme} />

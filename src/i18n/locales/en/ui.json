@@ -1,0 +1,43 @@
+{
+  "nav": {
+    "home": "Home",
+    "education": "Education",
+    "experience": "Experience",
+    "projects": "Projects",
+    "contact": "Contact Me"
+  },
+  "buttons": {
+    "visitWebsite": "Visit Website",
+    "downloadResume": "Download Resume",
+    "moreProjects": "More Projects",
+    "viewCertificate": "Certificate",
+    "tryAgain": "Try Again",
+    "goHome": "Go Home",
+    "previous": "Previous",
+    "next": "Next"
+  },
+  "education": {
+    "title": "Education",
+    "degreesReceived": "Degrees Received",
+    "mainCertifications": "Main Certifications",
+    "otherCertifications": "Other Certifications"
+  },
+  "skills": {
+    "header": "What I Do?"
+  },
+  "projects": {
+    "createdOn": "Created on"
+  },
+  "contact": {
+    "loadingResume": "Loading resume...",
+    "pageInfo": "Page {{current}} of {{total}}"
+  },
+  "error": {
+    "woops": "Woops",
+    "code404": "404",
+    "notFound": "The requested page is unavailable at the moment!"
+  },
+  "footer": {
+    "copyright": "All rights reserved."
+  }
+}

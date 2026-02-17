@@ -2,8 +2,10 @@ import React from "react";
 import ProjectLanguages from "../../components/projectLanguages/ProjectLanguages";
 import "./GithubRepoCard.css";
 import { Fade } from "react-reveal";
+import { useTranslation } from "react-i18next";
 
 export default function GithubRepoCard({ repo, theme, categories }) {
+  const { t } = useTranslation();
   function openRepoinNewTab(url) {
     var win = window.open(url, "_blank");
     win.focus();
@@ -61,7 +63,7 @@ export default function GithubRepoCard({ repo, theme, categories }) {
               className="repo-creation-date subTitle"
               style={{ color: theme.secondaryText }}
             >
-              Created on {repo.createdAt.split("T")[0]}
+              {t("projects.createdOn")} {repo.createdAt.split("T")[0]}
             </p>
             <ProjectLanguages
               className="repo-languages"

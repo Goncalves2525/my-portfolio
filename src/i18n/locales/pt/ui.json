@@ -1,0 +1,43 @@
+{
+  "nav": {
+    "home": "Início",
+    "education": "Educação",
+    "experience": "Experiência",
+    "projects": "Projetos",
+    "contact": "Contacte-me"
+  },
+  "buttons": {
+    "visitWebsite": "Visitar Website",
+    "downloadResume": "Descarregar CV",
+    "moreProjects": "Mais Projetos",
+    "viewCertificate": "Certificado",
+    "tryAgain": "Tentar Novamente",
+    "goHome": "Voltar ao Início",
+    "previous": "Anterior",
+    "next": "Seguinte"
+  },
+  "education": {
+    "title": "Educação",
+    "degreesReceived": "Graus Obtidos",
+    "mainCertifications": "Certificações Principais",
+    "otherCertifications": "Outras Certificações"
+  },
+  "skills": {
+    "header": "O Que Faço?"
+  },
+  "projects": {
+    "createdOn": "Criado em"
+  },
+  "contact": {
+    "loadingResume": "A carregar CV...",
+    "pageInfo": "Página {{current}} de {{total}}"
+  },
+  "error": {
+    "woops": "Ups",
+    "code404": "404",
+    "notFound": "A página solicitada não está disponível de momento!"
+  },
+  "footer": {
+    "copyright": "Todos os direitos reservados."
+  }
+}

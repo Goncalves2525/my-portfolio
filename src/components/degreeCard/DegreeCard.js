@@ -2,11 +2,13 @@ import React, { Component } from "react";
 import "./DegreeCard.css";
 import "../button/Button.css";
 import { Fade, Flip } from "react-reveal";
+import { withTranslation } from "react-i18next";
 
 class DegreeCard extends Component {
   render() {
     const degree = this.props.degree;
     const theme = this.props.theme;
+    const { t } = this.props;
     return (
       <div className="degree-card">
         {degree.logo_path && (
@@ -69,7 +71,7 @@ class DegreeCard extends Component {
                     "--btn-bg": theme.body,
                   }}
                 >
-                  Visit Website
+                  {t("buttons.visitWebsite")}
                 </a>
               )}
             </div>
@@ -80,4 +82,4 @@ class DegreeCard extends Component {
   }
 }
 
-export default DegreeCard;
+export default withTranslation()(DegreeCard);

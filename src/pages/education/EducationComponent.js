@@ -6,13 +6,17 @@ import Educations from "../../containers/education/Educations";
 import Certifications from "../../containers/certifications/Certifications";
 import CompetitiveSites from "../../components/competitiveSites/CompetitiveSites";
 import EducationImg from "./EducationImg";
-import { competitiveSites, mainCertifications, otherCertifications } from "../../portfolio";
+import { LanguageContext } from "../../context/LanguageContext";
+import { withTranslation } from "react-i18next";
 import "./EducationComponent.css";
 import { Fade } from "react-reveal";
 
 class Education extends Component {
+  static contextType = LanguageContext;
   render() {
     const theme = this.props.theme;
+    const { t } = this.props;
+    const { portfolio } = this.context;
     return (
       <div className="education-main">
         <Header theme={this.props.theme} />
@@ -20,33 +24,29 @@ class Education extends Component {
           <Fade bottom duration={800} distance="20px">
             <div className="heading-div">
               <div className="heading-img-div">
-                {/* <img
-									src={require("../../assets/images/education.svg")}
-									alt=""
-								/> */}
                 <EducationImg theme={theme} />
               </div>
               <div className="heading-text-div">
                 <h1 className="heading-text" style={{ color: theme.text }}>
-                  Education
+                  {t("education.title")}
                 </h1>
-                <CompetitiveSites logos={competitiveSites.competitiveSites} />
+                <CompetitiveSites logos={portfolio.competitiveSites.competitiveSites} />
               </div>
             </div>
           </Fade>
           <Educations theme={this.props.theme} />
-          {mainCertifications.certifications.length > 0 ? (
+          {portfolio.mainCertifications.certifications.length > 0 ? (
             <Certifications
               theme={this.props.theme}
-              title="Main Certifications"
-              certifications={mainCertifications.certifications}
+              title={t("education.mainCertifications")}
+              certifications={portfolio.mainCertifications.certifications}
             />
           ) : null}
-          {otherCertifications.certifications.length > 0 ? (
+          {portfolio.otherCertifications.certifications.length > 0 ? (
             <Certifications
               theme={this.props.theme}
-              title="Other Certifications"
-              certifications={otherCertifications.certifications}
+              title={t("education.otherCertifications")}
+              certifications={portfolio.otherCertifications.certifications}
             />
           ) : null}
         </div>
@@ -57,4 +57,4 @@ class Education extends Component {
   }
 }
 
-export default Education;
+export default withTranslation()(Education);

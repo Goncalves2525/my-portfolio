@@ -1,15 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Helmet } from "react-helmet";
-import {
-  greeting,
-  seo,
-  socialMediaLinks,
-  experience,
-  contactPageData,
-  certifications,
-} from "../../portfolio.js";
+import { LanguageContext } from "../../context/LanguageContext";
 
 function SeoHeader() {
+  const { portfolio, language } = useContext(LanguageContext);
+  const { greeting, seo, socialMediaLinks, experience, contactPageData, certifications } = portfolio;
+
   let sameAs = [];
   socialMediaLinks
     .filter(
@@ -61,7 +57,7 @@ function SeoHeader() {
     hasCredential: credentials,
   };
   return (
-    <Helmet>
+    <Helmet htmlAttributes={{ lang: language }}>
       <title>{seo.title}</title>
       <meta name="description" content={seo.description} />
       <meta property="og:title" content={seo?.og?.title} />
