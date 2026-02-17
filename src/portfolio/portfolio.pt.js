@@ -411,6 +411,30 @@ const projects = {
       projects: [
         {
           id: "1",
+          name: "My Portolfio",
+          createdAt: "2026",
+          url: "https://github.com/Goncalves2525/my-portfolio",
+          description:
+            "Website de portefólio pessoal que apresenta as minhas competências, projetos e experiência profissional como estudante de Engenharia Informática e Administrador de Sistemas.",
+          categories: ["Web"],
+          isFork: false,
+          languages: [
+            {
+              name: "JavaScript",
+              iconifyClass: "logos:javascript",
+            },
+            {
+              name: "React",
+              iconifyClass: "devicon:reactnative",
+            },
+            {
+              name: "Vercel",
+              iconifyClass: "devicon:vercel",
+            },
+          ],
+        },
+        {
+          id: "2",
           name: "Gestor-QR",
           createdAt: "2025",
           url: "https://github.com/Goncalves2525/gestor-qr",
@@ -442,7 +466,7 @@ const projects = {
           ],
         },
         {
-          id: "2",
+          id: "3",
           name: "BMI Calculater",
           createdAt: "2025",
           url: "https://github.com/Goncalves2525/bmi-calculater-flutter",
@@ -458,7 +482,7 @@ const projects = {
           ],
         },
         {
-          id: "3",
+          id: "4",
           name: "Flash Chat",
           createdAt: "2025",
           url: "https://github.com/Goncalves2525/flash-chat-flutter",
