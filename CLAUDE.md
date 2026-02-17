@@ -9,9 +9,12 @@ Este é um portfólio pessoal construído com React, baseado no template masterP
 - Styled Components
 - React Reveal (animações - duração padrão: 800ms)
 - Font Awesome / Iconify para ícones
+- **react-i18next** (v11.18.6) + **i18next** (v21.10.0) para internacionalização (EN/PT)
 - **Space Grotesk** como fonte principal (substituiu Inter, que substituiu Google Sans)
 - **Dark Navy + Cyan** como tema visual (`darkNavyTheme`)
 - Deploy via **Vercel** (auto-deploy on push): `https://ricardo-goncalves.vercel.app`
+
+> **Nota sobre versões i18n:** `react-scripts 3.2.0` não transpila optional chaining (`?.`) em `node_modules`. Por isso, as versões de i18next devem manter-se compatíveis: `react-i18next@11.x`, `i18next@21.x`, `i18next-browser-languagedetector@7.x`.
 
 ## Design System
 
@@ -56,13 +59,27 @@ Definidas em `src/index.css`:
 
 ## Estrutura de Arquivos Importantes
 
-### Configuração Principal
-- **`src/portfolio.js`** - Arquivo central de configuração
+### Internacionalização (i18n)
+- **`src/i18n/config.js`** - Configuração i18next com deteção de idioma (localStorage → navigator → fallback `en`)
+- **`src/i18n/locales/en/ui.json`** - Strings UI em inglês (~20% do texto: nav, botões, títulos de seções)
+- **`src/i18n/locales/pt/ui.json`** - Strings UI em português
+- **`src/portfolio/portfolio.en.js`** - Conteúdo do portfólio em inglês (~80% do texto)
+- **`src/portfolio/portfolio.pt.js`** - Conteúdo do portfólio em português
+- **`src/portfolio.js`** - Ficheiro original mantido para compatibilidade com componentes não usados do template
+- **`src/context/LanguageContext.js`** - Context que gere idioma ativo + expõe portfolio correto
+- **`src/components/languageSwitcher/LanguageSwitcher.js`** - Toggle EN/PT no header
+
+> **Arquitetura híbrida:** Dados complexos do portfólio (skills, experiência, projetos) são duplicados em ficheiros separados (`portfolio.en.js` / `portfolio.pt.js`). Strings UI simples (nav labels, botões, títulos) usam `react-i18next` com ficheiros JSON.
+
+### Configuração Principal (Portfolio)
+- **`src/portfolio/portfolio.en.js`** - Arquivo central de configuração (versão inglesa)
+- **`src/portfolio/portfolio.pt.js`** - Versão portuguesa
   - Contém todas as informações pessoais (nome, bio, redes sociais)
   - Skills e suas ilustrações
   - Experiências, educação, certificações
   - Projetos e publicações
   - `blogSection` e `addressSection` estão vazios (dados do template removidos)
+  - Campos **não traduzidos**: URLs, `skillName`, nomes de tecnologias, `logo_path`, nomes de empresas (mantidos iguais)
 
 ### Componentes de Greeting/Hero
 - **`src/containers/greeting/Greeting.js`** - Hero section da home page
@@ -91,11 +108,17 @@ Definidas em `src/index.css`:
 > **Nota:** CloudInfraImg e FullStackImg foram convertidos de `<img src={require()}>` para componentes React com SVG inline. Isso permite que as cores do SVG respondam ao tema (accent color via `theme.imageHighlight`).
 
 ### Componentes de Header/Navegação
-- **`src/components/header/Header.js`** - Navegação sticky com glassmorphism
+- **`src/components/header/Header.js`** - Navegação sticky com glassmorphism (**componente funcional**)
+  - Usa `useContext(LanguageContext)` + `useTranslation()` para i18n
   - Logo `< Ricardo Gonçalves />` usa `theme.imageHighlight` (cyan)
-  - Nav links: cor `theme.secondaryText`, hover cyan com `translateY(-2px)`
+  - Nav links traduzidos via `t("nav.home")`, `t("nav.education")`, etc.
+  - Inclui `LanguageSwitcher` ao lado do `ThemeToggle` no `header-toggle-wrapper`
   - Active page: bold + cyan via `activeStyle`
 - **`src/components/header/Header.css`** - `.header-wrapper` com `backdrop-filter: blur(12px)`
+- **`src/components/languageSwitcher/LanguageSwitcher.js`** - Toggle EN/PT
+  - Botão ativo: cor `theme.imageHighlight` (cyan) + border
+  - Inativo: `theme.secondaryText`
+  - Hover: `translateY(-2px)`
 
 ### Componentes de Buttons
 - **`src/components/button/Button.js`** - Botão reutilizável com hover via CSS
@@ -169,7 +192,7 @@ Definidas em `src/index.css`:
 
 ### Redes Sociais
 - Implementado sistema de `display: true/false` para mostrar/ocultar redes sociais
-- Localização: `src/portfolio.js` (linha ~43-91)
+- Localização: `src/portfolio/portfolio.en.js` e `src/portfolio/portfolio.pt.js`
 - Componente: `src/components/socialMedia/SocialMedia.js`
 - Usa `.filter()` para filtrar apenas items com `display !== false`
 - **Removido** da página Contact Me (apenas aparece no Footer)
@@ -217,12 +240,14 @@ Definidas em `src/index.css`:
 - Todos os botões (Resume, Visit Website, etc.) usam o mesmo sistema
 
 ### Navegação (Header)
+- **Componente funcional** (convertido de class para usar hooks: `useContext`, `useTranslation`)
 - **Sticky** com glassmorphism: `backdrop-filter: blur(12px)`, background transparente (permite gradiente visível)
 - **Full-width**: sem max-width constraint, ocupa toda a largura da página
 - Logo `< Ricardo Gonçalves />`: cor `theme.imageHighlight` (cyan), tamanho `1.6em`
-- Nav links: `theme.secondaryText` (#94A3B8) por defeito, tamanho `var(--text-base)`
+- Nav links traduzidos via `t("nav.home")`, etc.: `theme.secondaryText` (#94A3B8) por defeito, tamanho `var(--text-base)`
 - Nav hover: cyan (#06B6D4) + `translateY(-2px)`
 - Active page: bold + cyan via `activeStyle`
+- **LanguageSwitcher**: Toggle EN/PT ao lado do ThemeToggle no `header-toggle-wrapper`
 - Hamburger icon: `background: currentColor` (theme-aware)
 - Menu dropdown: background transparente (sem cor sólida)
 
@@ -262,8 +287,34 @@ Definidas em `src/index.css`:
 
 ## Diretrizes de Desenvolvimento
 
+### Ao Adicionar/Editar Traduções
+
+**Conteúdo do portfólio** (textos longos, dados estruturados):
+1. Editar `src/portfolio/portfolio.en.js` e `src/portfolio/portfolio.pt.js`
+2. Manter a mesma estrutura em ambos os ficheiros
+3. Não traduzir: URLs, `skillName`, nomes de tecnologias, `logo_path`, `fontAwesomeIcon`
+
+**Strings UI** (labels curtos, botões, títulos de seções):
+1. Editar `src/i18n/locales/en/ui.json` e `src/i18n/locales/pt/ui.json`
+2. Usar `t("chave")` no componente via `useTranslation()` (funcional) ou `withTranslation()` (class)
+3. Interpolação: `t("contact.pageInfo", { current: 1, total: 5 })` → `"Page 1 of 5"`
+
+**Padrões nos componentes:**
+- **Componentes funcionais**: `useContext(LanguageContext)` para portfolio data + `useTranslation()` para UI strings
+- **Class components**: `static contextType = LanguageContext` para portfolio data + `withTranslation()` HOC para UI strings
+- **Nota**: Nenhum class component usa `static contextType` para `ThemeContext` (usam `ThemeContext.Consumer` ou props), por isso `LanguageContext` é seguro em `contextType`
+
+**Persistência**: Idioma guardado em `localStorage` (key: `"language"`). Deteção automática: localStorage → navigator language → fallback `en`.
+
+### Ao Adicionar Novo Idioma
+1. Criar `src/portfolio/portfolio.XX.js` (copiar de `portfolio.en.js` e traduzir)
+2. Criar `src/i18n/locales/XX/ui.json` (copiar de `en/ui.json` e traduzir)
+3. Registar em `src/i18n/config.js`: adicionar `import uiXX` e `XX: { ui: uiXX }` nos resources
+4. Registar em `src/context/LanguageContext.js`: adicionar `import * as portfolioXX` e `XX: portfolioXX` no objeto `portfolios`
+5. Adicionar botão no `src/components/languageSwitcher/LanguageSwitcher.js`
+
 ### Ao Modificar Redes Sociais
-- Editar `src/portfolio.js`
+- Editar `src/portfolio/portfolio.en.js` e `src/portfolio/portfolio.pt.js`
 - Usar `display: true` para mostrar, `display: false` para ocultar
 - **Importante:** Não remover o item Gmail completamente (usado pelo SEO)
 
@@ -281,7 +332,7 @@ Para adicionar nova ilustração de skill:
 4. Registar no `SkillSection.js`
 
 ### Ao Adicionar Certificações com Ícones Iconify
-1. Editar `src/portfolio.js`
+1. Editar `src/portfolio/portfolio.en.js` e `src/portfolio/portfolio.pt.js`
 2. Adicionar no array `mainCertifications` ou `otherCertifications`:
 ```javascript
 {
@@ -297,7 +348,7 @@ Para adicionar nova ilustração de skill:
 
 ### Ao Adicionar Certificações com Imagem Local
 1. Colocar imagem em `/src/assets/images/`
-2. Adicionar no portfolio.js:
+2. Adicionar em `portfolio.en.js` e `portfolio.pt.js`:
 ```javascript
 {
   title: "CCNA",
@@ -370,8 +421,9 @@ npm test           # Executa testes
    - CSS vars definidas em `src/index.css`
 
 5. **SEO**:
-   - `SeoHeader.js` usa dados de `portfolio.js` para meta tags e structured data
-   - `seo.description` personalizada em `portfolio.js`
+   - `SeoHeader.js` usa `LanguageContext` para obter dados do portfolio ativo (meta tags e structured data mudam com o idioma)
+   - `<html lang="en">` / `<html lang="pt">` dinâmico via `react-helmet`
+   - `seo.description` personalizada em `portfolio.en.js` / `portfolio.pt.js`
    - `og:url` aponta para `https://ricardo-goncalves.vercel.app/`
    - `sitemap.xml` atualizado com URLs da Vercel (5 páginas: home, experience, education, projects, contact)
    - `robots.txt` com `Allow: /` e referência ao sitemap
@@ -382,8 +434,8 @@ npm test           # Executa testes
 7. **Template cleanup**: Scripts de tracking do autor original (AdSense, Google Ads, GA) foram removidos do `index.html`.
 
 8. **Dados por personalizar**:
-   - `publications` em `portfolio.js` ainda tem dados do autor original (secção escondida na UI)
-   - `blogSection` e `addressSection` em `portfolio.js` foram esvaziados (secções comentadas no Contact page)
+   - `publications` em `portfolio.en.js`/`portfolio.pt.js` ainda tem dados do autor original (secção escondida na UI)
+   - `blogSection` e `addressSection` foram esvaziados (secções comentadas no Contact page)
 
 9. **Contact page**: Título + descrição centrados, seguido de PDF viewer com o CV embutido. Secções de blog e address comentadas. SocialMedia apenas no Footer.
 
@@ -401,7 +453,7 @@ npm test           # Executa testes
 
 ## Sistema de Tags de Projetos
 
-### Estrutura no portfolio.js
+### Estrutura no portfolio.en.js / portfolio.pt.js
 ```javascript
 const projects = {
   sections: [
@@ -501,6 +553,17 @@ Para adicionar novas categorias, editar CSS em:
 - **Deployment**: Configurado Vercel (auto-deploy via GitHub push)
 - **Google Search Console**: Configurado e verificado
 
+### Fevereiro 2026 - Internacionalização (branch `translation`)
+- **Abordagem híbrida**: Ficheiros portfolio duplicados (`portfolio.en.js` / `portfolio.pt.js`) para conteúdo + `react-i18next` para UI strings
+- **Dependências**: `react-i18next@11.18.6`, `i18next@21.10.0`, `i18next-browser-languagedetector@7.1.0` (versões compatíveis com `react-scripts 3.2.0`)
+- **LanguageContext**: Segue padrão do `ThemeContext` existente (class component provider), expõe `{ language, portfolio, changeLanguage }`
+- **LanguageSwitcher**: Toggle EN/PT no header ao lado do ThemeToggle, estilo consistente com design system
+- **Header**: Convertido de class para functional component para usar `useContext` + `useTranslation`
+- **Componentes atualizados** (15+ ficheiros): Greeting, SkillSection, Skills, Educations, EducationComponent, Experience, Projects (page), ProjectsAccordion, Contact, Resume, Error404, Footer, SeoHeader, SocialMedia, DegreeCard, CertificationCard, GithubRepoCard
+- **Deteção automática**: localStorage → browser language → fallback EN
+- **SEO dinâmico**: `<html lang>` muda com idioma, meta tags traduzidas
+- **Backward compatibility**: `src/portfolio.js` original mantido para componentes não usados do template (Achievement, Blogs, Talks, etc.)
+
 ## Melhorias Futuras Sugeridas
 
 - [ ] Remover ou substituir dados de `publications` em `portfolio.js` (dados do autor original)
@@ -511,3 +574,5 @@ Para adicionar novas categorias, editar CSS em:
 - [ ] Adicionar mais competitive sites se necessário
 - [ ] Criar novas categorias de tags se necessário
 - [ ] Comprar domínio personalizado (ex: ricardogoncalves.dev) e configurar na Vercel
+- [ ] Rever e refinar traduções portuguesas em `portfolio.pt.js`
+- [ ] Atualizar `sitemap.xml` com versões alternativas de idioma (`hreflang`)

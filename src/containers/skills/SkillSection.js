@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./Skills.css";
 import SoftwareSkill from "../../components/softwareSkills/SoftwareSkill";
-import { skills } from "../../portfolio";
+import { LanguageContext } from "../../context/LanguageContext";
 import { Fade } from "react-reveal";
 import DataScienceImg from "./DataScienceImg";
 import FullStackImg from "./FullStackImg";
@@ -19,11 +19,13 @@ function GetSkillSvg(props) {
 }
 
 class SkillSection extends Component {
+  static contextType = LanguageContext;
   render() {
     const theme = this.props.theme;
+    const { portfolio } = this.context;
     return (
       <div>
-        {skills.data.map((skill, i) => {
+        {portfolio.skills.data.map((skill, i) => {
           return (
             <div key={i} className="skills-main-div">
               <Fade left duration={800}>

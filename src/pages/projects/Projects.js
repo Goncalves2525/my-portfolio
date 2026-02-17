@@ -5,17 +5,18 @@ import Button from "../../components/button/Button";
 import TopButton from "../../components/topButton/TopButton";
 import ProjectsAccordion from "../../containers/projectsAccordion/ProjectsAccordion";
 import { Fade } from "react-reveal";
-import {
-  greeting,
-  projectsHeader,
-  projects,
-} from "../../portfolio.js";
+import { LanguageContext } from "../../context/LanguageContext";
+import { withTranslation } from "react-i18next";
 import "./Projects.css";
 import ProjectsImg from "./ProjectsImg";
 
 class Projects extends Component {
+  static contextType = LanguageContext;
   render() {
     const theme = this.props.theme;
+    const { t } = this.props;
+    const { portfolio } = this.context;
+    const { projectsHeader, projects, greeting } = portfolio;
     return (
       <div className="projects-main">
         <Header theme={theme} />
@@ -23,10 +24,6 @@ class Projects extends Component {
           <Fade bottom duration={800} distance="20px">
             <div className="projects-heading-div">
               <div className="projects-heading-img-div">
-                {/* <img
-											src={require(`../../assets/images/${projectsHeader["avatar_image_path"]}`)}
-											alt=""
-										/> */}
                 <ProjectsImg theme={theme} />
               </div>
               <div className="projects-heading-text-div">
@@ -48,7 +45,7 @@ class Projects extends Component {
         </div>
         <ProjectsAccordion sections={projects["sections"]} theme={theme} />
         <Button
-          text={"More Projects"}
+          text={t("buttons.moreProjects")}
           className="project-button"
           href={greeting.githubProfile}
           newTab={true}
@@ -92,4 +89,4 @@ class Projects extends Component {
   }
 }
 
-export default Projects;
+export default withTranslation()(Projects);

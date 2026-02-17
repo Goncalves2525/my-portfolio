@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import "./CertificationCard.css";
 import { Fade } from "react-reveal";
+import { withTranslation } from "react-i18next";
 
 class CertificationCard extends Component {
   render() {
     const certificate = this.props.certificate;
     const theme = this.props.theme;
+    const { t } = this.props;
     return (
       <Fade bottom duration={600} distance="20px">
         <div
@@ -46,7 +48,7 @@ class CertificationCard extends Component {
               </div>
               <div className="content-details fadeIn-top">
                 <h3 className="content-title" style={{ color: theme.body }}>
-                  Certificate
+                  {t("buttons.viewCertificate")}
                 </h3>
               </div>
             </a>
@@ -68,4 +70,4 @@ class CertificationCard extends Component {
   }
 }
 
-export default CertificationCard;
+export default withTranslation()(CertificationCard);

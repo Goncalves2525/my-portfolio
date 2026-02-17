@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./SocialMedia.css";
-import { socialMediaLinks } from "../../portfolio";
+import { LanguageContext } from "../../context/LanguageContext";
 import styled from "styled-components";
 
 const IconWrapper = styled.span`
@@ -13,10 +13,11 @@ const IconWrapper = styled.span`
   }
 `;
 
-export default function socialMedia(props) {
+export default function SocialMedia(props) {
+  const { portfolio } = useContext(LanguageContext);
   return (
     <div className="social-media-div">
-      {socialMediaLinks
+      {portfolio.socialMediaLinks
         .filter((media) => media.display !== false)
         .map((media, i) => {
           // Use iconType if provided, otherwise default to 'fab' (brands)

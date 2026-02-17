@@ -5,15 +5,15 @@ import TopButton from "../../components/topButton/TopButton";
 import Button from "../../components/button/Button";
 import { Fade } from "react-reveal";
 import "./ContactComponent.css";
-import { contactPageData, greeting } from "../../portfolio.js";
+import { LanguageContext } from "../../context/LanguageContext";
+import { withTranslation } from "react-i18next";
 import myResumePdf from "../../assets/docs/CV-Ricardo-Goncalves-2026.pdf";
 import { Document, Page, pdfjs } from "react-pdf";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
-const ContactData = contactPageData.contactSection;
-
 class Contact extends Component {
+  static contextType = LanguageContext;
   constructor(props) {
     super(props);
     this.state = {
@@ -73,6 +73,9 @@ class Contact extends Component {
 
   render() {
     const theme = this.props.theme;
+    const { t } = this.props;
+    const { portfolio } = this.context;
+    const ContactData = portfolio.contactPageData.contactSection;
     const { pageWidth, numPages, currentPage, isLoading, error } = this.state;
 
     return (
@@ -100,9 +103,9 @@ class Contact extends Component {
             <div className="contact-resume-section">
               <div className="contact-download-btn">
                 <Button
-                  text="Download Resume"
+                  text={t("buttons.downloadResume")}
                   newTab={true}
-                  href={greeting.resumeLink}
+                  href={portfolio.greeting.resumeLink}
                   theme={theme}
                 />
               </div>
@@ -111,7 +114,7 @@ class Contact extends Component {
                 <div className="resume-loading">
                   <div className="loading-spinner"></div>
                   <p style={{ color: theme.secondaryText }}>
-                    Loading resume...
+                    {t("contact.loadingResume")}
                   </p>
                 </div>
               )}
@@ -123,7 +126,7 @@ class Contact extends Component {
                     onClick={() => window.location.reload()}
                     className="retry-btn"
                   >
-                    Try Again
+                    {t("buttons.tryAgain")}
                   </button>
                 </div>
               )}
@@ -138,7 +141,7 @@ class Contact extends Component {
                       <div className="resume-loading">
                         <div className="loading-spinner"></div>
                         <p style={{ color: theme.secondaryText }}>
-                          Loading resume...
+                          {t("contact.loadingResume")}
                         </p>
                       </div>
                     }
@@ -163,20 +166,20 @@ class Contact extends Component {
                         disabled={currentPage === 1}
                         className="pagination-btn"
                       >
-                        ← Previous
+                        ← {t("buttons.previous")}
                       </button>
                       <span
                         className="page-info"
                         style={{ color: theme.secondaryText }}
                       >
-                        Page {currentPage} of {numPages}
+                        {t("contact.pageInfo", { current: currentPage, total: numPages })}
                       </span>
                       <button
                         onClick={this.goToNextPage}
                         disabled={currentPage === numPages}
                         className="pagination-btn"
                       >
-                        Next →
+                        {t("buttons.next")} →
                       </button>
                     </div>
                   )}
@@ -192,4 +195,4 @@ class Contact extends Component {
   }
 }
 
-export default Contact;
+export default withTranslation()(Contact);

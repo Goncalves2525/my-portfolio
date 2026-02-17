@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Greeting.css";
-import { greeting } from "../../portfolio";
+import { LanguageContext } from "../../context/LanguageContext";
 import { Fade } from "react-reveal";
 import FeelingProud from "./FeelingProud";
 
 export default function Greeting(props) {
   const theme = props.theme;
+  const { portfolio } = useContext(LanguageContext);
+  const { greeting } = portfolio;
   return (
     <Fade bottom duration={800} distance="20px">
       <div className="greet-main" id="greeting">
