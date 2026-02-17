@@ -35,7 +35,7 @@
 }
 
 .header li a.nav-link:hover {
-  color: #06B6D4 !important;
+  color: var(--accent-color) !important;
   transform: translateY(-2px);
 }
 
@@ -54,6 +54,15 @@
   font-family: "Bonheur Royale", cursive;
   font-weight: bold;
   padding: 0 6px;
+}
+
+/* Theme toggle wrapper */
+.header-toggle-wrapper {
+  display: flex;
+  align-items: center;
+  float: right;
+  margin-top: 18px;
+  margin-right: var(--space-2);
 }
 
 /* menu */
@@ -150,5 +159,10 @@
   }
   .header .menu-icon {
     display: none;
+  }
+  .header-toggle-wrapper {
+    float: none;
+    margin-top: 0;
+    margin-left: var(--space-4);
   }
 }

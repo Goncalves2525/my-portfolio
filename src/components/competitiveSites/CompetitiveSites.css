@@ -26,5 +26,5 @@
 }
 
 .competitive-sites-inline > i:hover {
-  color: #06B6D4;
+  color: var(--accent-color);
 }

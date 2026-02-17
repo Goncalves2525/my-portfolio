@@ -129,7 +129,7 @@
   width: 48px;
   height: 48px;
   border: 4px solid rgba(148, 163, 184, 0.2);
-  border-top: 4px solid #06B6D4;
+  border-top: 4px solid var(--accent-color);
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
@@ -161,16 +161,16 @@
   font-size: var(--text-sm);
   font-weight: var(--font-semibold);
   font-family: var(--font-family);
-  border: 2px solid #06B6D4;
+  border: 2px solid var(--accent-color);
   background-color: transparent;
-  color: #06B6D4;
+  color: var(--accent-color);
   border-radius: var(--space-2);
   cursor: pointer;
   transition: all var(--transition-base);
 }
 
 .retry-btn:hover {
-  background-color: #06B6D4;
+  background-color: var(--accent-color);
   color: #0F172A;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(6, 182, 212, 0.3);
@@ -191,16 +191,16 @@
   font-size: var(--text-sm);
   font-weight: var(--font-semibold);
   font-family: var(--font-family);
-  border: 2px solid #06B6D4;
+  border: 2px solid var(--accent-color);
   background-color: transparent;
-  color: #06B6D4;
+  color: var(--accent-color);
   border-radius: var(--space-2);
   cursor: pointer;
   transition: all var(--transition-base);
 }
 
 .pagination-btn:hover:not(:disabled) {
-  background-color: #06B6D4;
+  background-color: var(--accent-color);
   color: #0F172A;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(6, 182, 212, 0.3);
