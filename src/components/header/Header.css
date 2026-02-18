@@ -24,6 +24,10 @@
   overflow: hidden;
 }
 
+.header .menu-btn:checked ~ .menu {
+  overflow: visible;
+}
+
 .header li a {
   display: block;
   padding: var(--space-2) var(--space-4);
