@@ -13,7 +13,7 @@ const seo = {
   og: {
     title: "Portfólio Ricardo Gonçalves",
     type: "website",
-    url: "https://www.ricardogoncalves.dev/",
+    url: "https://ricardogoncalves.dev/",
   },
 };
 
