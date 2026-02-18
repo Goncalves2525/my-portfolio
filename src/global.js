@@ -8,9 +8,16 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
+    background: ${({ theme }) => theme.body};
     background: linear-gradient(160deg, ${({ theme }) => theme.body} 0%, ${({ theme }) => theme.dark} 100%);
     min-height: 100vh;
     min-height: 100dvh;
+  }
+
+  @media (hover: hover) {
+    body {
+      background-attachment: fixed;
+    }
     color: ${({ theme }) => theme.text};
     font-family: var(--font-family);
     transition: background 0.3s ease, color 0.3s ease;
