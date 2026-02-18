@@ -98,8 +98,7 @@ const skills = {
       skills: [
         "⚡ Configuração e gestão de servidores Linux para ambientes de produção",
         "⚡ Construção de pipelines CI/CD com GitHub Actions para testes e deploy automatizados",
-        "⚡ Containerização de aplicações com Docker e orquestração com Kubernetes",
-        "⚡ Gestão de infraestrutura cloud na AWS",
+        "⚡ Containerização de aplicações com Docker",
       ],
       softwareSkills: [
         {
@@ -120,20 +119,20 @@ const skills = {
             color: "#1488C6",
           },
         },
-        {
-          skillName: "Kubernetes",
-          fontAwesomeClassname: "simple-icons:kubernetes",
-          style: {
-            color: "#326CE5",
-          },
-        },
-        {
-          skillName: "AWS",
-          fontAwesomeClassname: "simple-icons:amazonaws",
-          style: {
-            color: "#FF9900",
-          },
-        },
+        // {
+        //   skillName: "Kubernetes",
+        //   fontAwesomeClassname: "simple-icons:kubernetes",
+        //   style: {
+        //     color: "#326CE5",
+        //   },
+        // },
+        // {
+        //   skillName: "AWS",
+        //   fontAwesomeClassname: "simple-icons:amazonaws",
+        //   style: {
+        //     color: "#FF9900",
+        //   },
+        // },
       ],
     },
     {
