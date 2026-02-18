@@ -24,14 +24,17 @@ export default function Header({ theme }) {
             </span>
             <span style={{ color: theme.imageHighlight }}>/&gt;</span>
           </NavLink>
+
+          {/* Desktop only: switchers next to nav */}
+          <div className="header-toggle-desktop">
+            <LanguageSwitcher theme={theme} />
+            <ThemeToggle />
+          </div>
+
           <input className="menu-btn" type="checkbox" id="menu-btn" />
           <label className="menu-icon" htmlFor="menu-btn">
             <span className="navicon"></span>
           </label>
-          <div className="header-toggle-wrapper">
-            <LanguageSwitcher theme={theme} />
-            <ThemeToggle />
-          </div>
           <ul className="menu">
             <li>
               <NavLink
@@ -87,6 +90,13 @@ export default function Header({ theme }) {
               >
                 {t("nav.contact")}
               </NavLink>
+            </li>
+            {/* Mobile only: switchers at bottom of menu */}
+            <li className="menu-toggles">
+              <div className="menu-toggles-inner">
+                <LanguageSwitcher theme={theme} />
+                <ThemeToggle />
+              </div>
             </li>
           </ul>
         </header>

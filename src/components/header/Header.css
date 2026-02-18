@@ -11,7 +11,9 @@
 }
 
 .header {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   padding: var(--space-4) var(--space-6);
 }
 
@@ -42,7 +44,6 @@
 .header .logo {
   display: flex;
   align-items: center;
-  float: left;
   font-size: 1.6em;
   text-decoration: none;
   margin-top: 0;
@@ -56,14 +57,26 @@
   padding: 0 6px;
 }
 
-/* Theme toggle wrapper */
-.header-toggle-wrapper {
-  display: flex;
+/* Desktop toggle wrapper — hidden on mobile */
+.header-toggle-desktop {
+  display: none;
   align-items: center;
   gap: var(--space-4);
-  float: right;
-  margin-top: 18px;
-  margin-right: var(--space-2);
+}
+
+/* Mobile toggle wrapper — inside dropdown menu */
+.menu-toggles {
+  display: block;
+  padding: var(--space-4) var(--space-4) var(--space-2);
+  margin-top: var(--space-2);
+  border-top: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.menu-toggles-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
 }
 
 /* menu */
@@ -73,7 +86,7 @@
 }
 
 .header .menu {
-  clear: both;
+  width: 100%;
   max-height: 0;
   transition: max-height 0.2s ease-out;
 }
@@ -82,9 +95,10 @@
 
 .header .menu-icon {
   cursor: pointer;
-  display: inline-block;
-  float: right;
-  padding: 28px 20px;
+  display: inline-flex;
+  align-items: center;
+  margin-left: auto;
+  padding: 10px;
   position: relative;
   user-select: none;
 }
@@ -124,7 +138,7 @@
 }
 
 .header .menu-btn:checked ~ .menu {
-  max-height: 370px;
+  max-height: 450px;
 }
 
 .header .menu-btn:checked ~ .menu-icon .navicon {
@@ -147,23 +161,27 @@
 /* 69em = 1104px */
 
 @media (min-width: 69em) {
+  .header {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
   .header li {
     float: left;
   }
-  .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
   .header .menu {
     max-height: none;
+    width: auto;
   }
   .header .menu-icon {
     display: none;
   }
-  .header-toggle-wrapper {
-    float: none;
-    margin-top: 0;
+  /* Show desktop toggles, hide mobile toggles */
+  .header-toggle-desktop {
+    display: flex;
     margin-left: var(--space-4);
+    order: 1;
+  }
+  .menu-toggles {
+    display: none;
   }
 }
