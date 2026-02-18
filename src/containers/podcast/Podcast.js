@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Podcast.css";
-import { podcastSection } from "../../portfolio";
+import { LanguageContext } from "../../context/LanguageContext";
 
 export default function Podcast() {
+  const { portfolio } = useContext(LanguageContext);
+  const { podcastSection } = portfolio;
   return (
     <div className="main">
       <div className="podcast-header">

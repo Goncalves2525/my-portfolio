@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Blog.css";
 import BlogCard from "../../components/blogCard/BlogCard";
-import { blogSection } from "../../portfolio";
+import { LanguageContext } from "../../context/LanguageContext";
 
 export default function Blogs() {
+  const { portfolio } = useContext(LanguageContext);
+  const { blogSection } = portfolio;
   return (
     <div className="main" id="blogs">
       <div className="blog-header">

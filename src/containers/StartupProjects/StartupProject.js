@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./StartupProjects.css";
-import { bigProjects } from "../../portfolio";
+import { LanguageContext } from "../../context/LanguageContext";
 
 export default function StartupProject() {
+  const { portfolio } = useContext(LanguageContext);
+  const { bigProjects } = portfolio;
   function openProjectInNewWindow(url) {
     var win = window.open(url, "_blank");
     win.focus();

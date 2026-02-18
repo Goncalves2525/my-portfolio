@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Contact.css";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
-import { contactInfo } from "../../portfolio";
+import { LanguageContext } from "../../context/LanguageContext";
 
 export default function Contact() {
+  const { portfolio } = useContext(LanguageContext);
+  const { contactInfo } = portfolio;
   return (
     <div className="main contact-margin-top" id="contact">
       <div className="contact-div-main">

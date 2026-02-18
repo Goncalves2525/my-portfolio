@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Talks.css";
 import TalkCard from "../../components/talkCard/TalkCard";
-import { talkSection } from "../../portfolio";
+import { LanguageContext } from "../../context/LanguageContext";
 
 export default function Talks() {
+  const { portfolio } = useContext(LanguageContext);
+  const { talkSection } = portfolio;
   return (
     <div className="main" id="talks">
       <div className="talk-header">

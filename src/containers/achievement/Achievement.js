@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Achievement.css";
 import AchivementCard from "../../components/achievementCard/AchivementCard";
-import { achievementSection } from "../../portfolio";
+import { LanguageContext } from "../../context/LanguageContext";
 
 export default function Achievement() {
+  const { portfolio } = useContext(LanguageContext);
+  const { achievementSection } = portfolio;
   // function openUrlInNewTab(url) {
   //   var win = window.open(url, "_blank");
   //   win.focus();
