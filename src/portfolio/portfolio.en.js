@@ -224,10 +224,10 @@ const degrees = {
   degrees: [
     {
       title: "Instituto Superior de Engenharia do Porto",
-      subtitle: "Computer Engineering",
+      subtitle: "Degree - Computer Engineering",
       logo_path: "isep_logo.png",
       alt_name: "ISEP Logo",
-      duration: "2022 - 2025",
+      duration: "2022 - 2026",
       descriptions: [
         "⚡ Studied core subjects including software engineering, databases, data structures, computer architecture, networking and AI.",
         "⚡ Applied software engineering best practices: SOLID principles, Agile methodologies and clean architecture patterns (Clean, Onion, MVP).",
@@ -235,6 +235,19 @@ const degrees = {
         "⚡ Developed skills in systems administration, cybersecurity, project management and data analysis.",
       ],
       website_link: "https://www.isep.ipp.pt/Course/Course/26",
+    },
+    {
+      title: "Ministério da Defesa Nacional",
+      subtitle: "CTeSP - Information Systems and Networks Technician",
+      logo_path: "defesa.png",
+      alt_name: "Ministério da Defesa Nacional",
+      duration: "2019 - 2021",
+      descriptions: [
+        "⚡ Training in programming, databases, electronics and telecommunications.",
+        "⚡ In-depth study of computer networking with CCNA (Cisco) certification.",
+        "⚡ Server administration and configuration in Windows and Linux environments.",
+      ],
+      website_link: "https://www.exercito.pt/pt/junta-te/qp-ese",
     },
   ],
 };

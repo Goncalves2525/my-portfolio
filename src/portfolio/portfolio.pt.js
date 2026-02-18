@@ -215,10 +215,10 @@ const degrees = {
   degrees: [
     {
       title: "Instituto Superior de Engenharia do Porto",
-      subtitle: "Engenharia Informática",
+      subtitle: "Licenciatura - Engenharia Informática",
       logo_path: "isep_logo.png",
       alt_name: "ISEP Logo",
-      duration: "2022 - 2025",
+      duration: "2022 - 2026",
       descriptions: [
         "⚡ Estudei disciplinas fundamentais incluindo engenharia de software, bases de dados, estruturas de dados, arquitetura de computadores, redes e IA.",
         "⚡ Apliquei boas práticas de engenharia de software: princípios SOLID, metodologias Ágeis e padrões de arquitetura limpa (Clean, Onion, MVP).",
@@ -226,6 +226,19 @@ const degrees = {
         "⚡ Desenvolvi competências em administração de sistemas, cibersegurança, gestão de projetos e análise de dados.",
       ],
       website_link: "https://www.isep.ipp.pt/Course/Course/26",
+    },
+    {
+      title: "Ministério da Defesa Nacional",
+      subtitle: "CTeSP - Técnico de Sistemas de Informação e Redes",
+      logo_path: "defesa.png",
+      alt_name: "Ministério da Defesa Nacional",
+      duration: "2019 - 2021",
+      descriptions: [
+        "⚡ Formação em programação, bases de dados, eletrónica e telecomunicações.",
+        "⚡ Estudo aprofundado de redes de computadores com certificação CCNA (Cisco).",
+        "⚡ Administração e configuração de servidores em ambiente Windows e Linux.",
+      ],
+      website_link: "https://www.exercito.pt/pt/junta-te/qp-ese",
     },
   ],
 };
