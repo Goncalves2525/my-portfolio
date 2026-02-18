@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ricardo-goncalves.vercel.app/sitemap.xml
+Sitemap: https://www.ricardogoncalves.dev/sitemap.xml

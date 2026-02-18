@@ -13,7 +13,7 @@ const seo = {
   og: {
     title: "Portfólio Ricardo Gonçalves",
     type: "website",
-    url: "https://ricardo-goncalves.vercel.app/",
+    url: "https://www.ricardogoncalves.dev/",
   },
 };
 
