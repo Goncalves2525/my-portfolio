@@ -23,7 +23,7 @@ const greeting = {
   logo_name: "Ricardo Gonçalves",
   nickname: "",
   subTitle:
-    "Atualmente trabalho como SysAdmin e estou a aprender conceitos DevOps. Tenho explorado tecnologias como Docker, Kubernetes, Terraform, Ansible, CI/CD com GitHub Actions e monitorização com Prometheus. Acredito que combinar conhecimento de sistemas com práticas modernas de DevOps é essencial para construir soluções escaláveis e eficientes.",
+    "Atualmente trabalho como Administrador de Sistemas e estou a aprender conceitos DevOps. Tenho explorado tecnologias como Docker, Kubernetes, Terraform, Ansible, CI/CD com GitHub Actions e monitorização com Prometheus. Acredito que combinar conhecimento de sistemas com práticas modernas de DevOps é essencial para construir soluções escaláveis e eficientes.",
   resumeLink:
     "https://drive.google.com/file/d/1IsOnky1f_R_cJbx0NlGebK3q8dOECcMR/view?usp=drive_link",
   portfolio_repository: "https://github.com/ashutosh1919/masterPortfolio",
