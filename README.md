@@ -8,6 +8,8 @@ Personal portfolio website showcasing my skills, projects, and professional expe
 
 **Live Demo:** [Your Portfolio URL]
 
+![Banner](./images/social.png)
+
 ---
 
 ## 📋 About
