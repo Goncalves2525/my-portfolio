@@ -6,7 +6,7 @@
 
 Personal portfolio website showcasing my skills, projects, and professional experience as a Computer Engineering student and System Administrator.
 
-**Live Demo:** [Your Portfolio URL]
+**Live Demo:** https://ricardogoncalves.dev/
 
 ![Banner](./images/social.png)
 
