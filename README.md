@@ -1,3 +1,5 @@
+![Banner](https://raw.githubusercontent.com/Goncalves2525/my-portfolio/main/images/social.png)
+
 # Ricardo Gonçalves - Portfolio 🚀
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
@@ -7,8 +9,6 @@
 Personal portfolio website showcasing my skills, projects, and professional experience as a Computer Engineering student and System Administrator.
 
 **Live Demo:** https://ricardogoncalves.dev/
-
-![Banner](./images/social.png)
 
 ---
 
