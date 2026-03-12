@@ -21,8 +21,8 @@
 
 .repo-card-image img {
   width: 100%;
-  height: 180px;
-  object-fit: cover;
+  max-height: 200px;
+  object-fit: contain;
   display: block;
   transition: transform var(--transition-slow);
 }
@@ -208,6 +208,6 @@
   }
 
   .repo-card-image img {
-    height: 140px;
+    max-height: 140px;
   }
 }

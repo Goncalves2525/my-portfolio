@@ -485,6 +485,7 @@ const projects = {
           url: "https://github.com/Goncalves2525/bmi-calculater-flutter",
           description:
             "Uma calculadora de IMC (Índice de Massa Corporal) simples e elegante construída com Flutter.",
+          image: "bmi.gif",
           categories: ["Mobile"],
           isFork: false,
           languages: [
@@ -501,6 +502,7 @@ const projects = {
           url: "https://github.com/Goncalves2525/flash-chat-flutter",
           description:
             "Uma aplicação de mensagens em tempo real moderna construída com Flutter e Firebase.",
+          image: "flash_chat.gif",
           categories: ["Mobile"],
           isFork: false,
           languages: [
