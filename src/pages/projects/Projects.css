@@ -86,6 +86,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: var(--space-6);
+  align-items: start;
   margin-top: var(--space-10);
 }
 
