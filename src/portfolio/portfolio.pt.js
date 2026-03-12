@@ -452,6 +452,7 @@ const projects = {
           url: "https://github.com/Goncalves2525/gestor-qr",
           description:
             "Uma aplicação simples para gerir o stock com códigos QR, focada nas melhores práticas de CI/CD.",
+          image: "gestor-qr.png",
           categories: ["DevOps", "Web"],
           isFork: false,
           languages: [

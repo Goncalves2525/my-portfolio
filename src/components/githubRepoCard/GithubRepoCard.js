@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import ReactDOM from "react-dom";
 import ProjectLanguages from "../../components/projectLanguages/ProjectLanguages";
 import "./GithubRepoCard.css";
 import { Fade } from "react-reveal";
@@ -6,6 +7,8 @@ import { useTranslation } from "react-i18next";
 
 export default function GithubRepoCard({ repo, theme, categories }) {
   const { t } = useTranslation();
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+
   function openRepoinNewTab(url) {
     var win = window.open(url, "_blank");
     win.focus();
@@ -99,12 +102,31 @@ export default function GithubRepoCard({ repo, theme, categories }) {
         </div>
       </Fade>
       {repo.image && (
-        <div className="repo-card-image">
+        <div
+          className="repo-card-image"
+          onClick={(e) => {
+            e.stopPropagation();
+            setLightboxOpen(true);
+          }}
+        >
           <img
             src={require("../../assets/images/" + repo.image)}
             alt={repo.name}
           />
         </div>
+      )}
+      {lightboxOpen && repo.image && ReactDOM.createPortal(
+        <div className="lightbox-overlay" onClick={(e) => {
+          e.stopPropagation();
+          setLightboxOpen(false);
+        }}>
+          <img
+            className="lightbox-image"
+            src={require("../../assets/images/" + repo.image)}
+            alt={repo.name}
+          />
+        </div>,
+        document.body
       )}
     </div>
   );
