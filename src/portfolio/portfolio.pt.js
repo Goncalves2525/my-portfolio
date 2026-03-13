@@ -596,6 +596,7 @@ const projects = {
           createdAt: "2024",
           description:
             "Solução para gestão de consultas cirúrgicas, pedidos de operação, registos de pacientes e alocação de recursos em unidades de saúde. Inclui funcionalidades de visualização 3D de pisos hospitalares, agendamento otimizado de cirurgias e conformidade com o RGPD.",
+          image: "healthcare.gif",
           url:
             "https://github.com/Goncalves2525/Surgical-Appointment-and-Resource-Management-System",
           categories: ["Web"],

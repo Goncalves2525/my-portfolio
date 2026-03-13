@@ -605,6 +605,7 @@ const projects = {
           createdAt: "2024",
           description:
             "Solution for managing surgical appointments, operation requests, patient records, and resource allocation in healthcare facilities. It includes features for 3D visualization of hospital floors, optimal scheduling of surgeries, and GDPR compliance.",
+          image: "healthcare.gif",
           url:
             "https://github.com/Goncalves2525/Surgical-Appointment-and-Resource-Management-System",
           categories: ["Web"],
