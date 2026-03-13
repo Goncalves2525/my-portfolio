@@ -428,7 +428,7 @@ const projects = {
           url: "https://github.com/Goncalves2525/os-digger",
           isPrivate: true,
           description:
-            "OS Digger analyzes Service Order documents in multiple formats (PDF, DOCX, DOC, ODT) and automatically extracts structured information by category. It supports general keyword search and individual lookup by NIM through the Soldier's Record.",
+            "O OS Digger analisa documentos de Ordens de Serviço em múltiplos formatos (PDF, DOCX, DOC, ODT) e extrai automaticamente informação estruturada por categorias. Permite pesquisa geral por palavra-chave e consulta individual por NIM através da Ficha do Militar.",
           image: "os-digger.png",
           categories: ["Desktop"],
           isFork: false,
