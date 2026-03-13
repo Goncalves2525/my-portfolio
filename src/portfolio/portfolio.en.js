@@ -437,6 +437,7 @@ const projects = {
           url: "https://github.com/Goncalves2525/my-portfolio",
           description:
             "Personal portfolio website showcasing my skills, projects, and professional experience as a Computer Engineering student and System Administrator.",
+          image: "portfolio-site.png",
           categories: ["Web"],
           isFork: false,
           languages: [

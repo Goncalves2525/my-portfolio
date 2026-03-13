@@ -428,6 +428,7 @@ const projects = {
           url: "https://github.com/Goncalves2525/my-portfolio",
           description:
             "Website de portefólio pessoal que apresenta as minhas competências, projetos e experiência profissional como estudante de Engenharia Informática e Administrador de Sistemas.",
+          image: "portfolio-site.png",
           categories: ["Web"],
           isFork: false,
           languages: [
