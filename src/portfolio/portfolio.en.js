@@ -431,6 +431,24 @@ const projects = {
       title: "Personal Projects",
       projects: [
         {
+          id: "5",
+          name: "OS Digger",
+          createdAt: "2026",
+          url: "https://github.com/Goncalves2525/os-digger",
+          isPrivate: true,
+          description:
+            "OS Digger analyzes Service Order documents in multiple formats (PDF, DOCX, DOC, ODT) and automatically extracts structured information by category. It supports general keyword search and individual lookup by NIM through the Soldier's Record.",
+          image: "os-digger.png",
+          categories: ["Desktop"],
+          isFork: false,
+          languages: [
+            {
+              name: "Python",
+              iconifyClass: "material-icon-theme:python",
+            },
+          ],
+        },
+        {
           id: "4",
           name: "My Portfolio",
           createdAt: "2026",
