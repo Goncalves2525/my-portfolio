@@ -8,10 +8,19 @@ import { useTranslation } from "react-i18next";
 export default function GithubRepoCard({ repo, theme, categories }) {
   const { t } = useTranslation();
   const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [privateModalOpen, setPrivateModalOpen] = useState(false);
 
   function openRepoinNewTab(url) {
     var win = window.open(url, "_blank");
     win.focus();
+  }
+
+  function handleCardClick(e) {
+    if (repo.isPrivate) {
+      setPrivateModalOpen(true);
+    } else {
+      openRepoinNewTab(repo.url);
+    }
   }
 
   const getCategoryClass = (cat) => {
@@ -26,7 +35,7 @@ export default function GithubRepoCard({ repo, theme, categories }) {
     : [];
 
   return (
-    <div className="repo-card-div" style={{ backgroundColor: theme.cardBackground || theme.highlight }} onClick={() => openRepoinNewTab(repo.url)}>
+    <div className="repo-card-div" style={{ backgroundColor: theme.cardBackground || theme.highlight }} onClick={handleCardClick}>
       <Fade bottom duration={800} distance="20px">
         <div key={repo.id} className="repo-card-body">
           <div className="repo-name-div">
@@ -125,6 +134,40 @@ export default function GithubRepoCard({ repo, theme, categories }) {
             src={require("../../assets/images/" + repo.image)}
             alt={repo.name}
           />
+        </div>,
+        document.body
+      )}
+      {privateModalOpen && ReactDOM.createPortal(
+        <div
+          className="lightbox-overlay"
+          onClick={(e) => {
+            e.stopPropagation();
+            setPrivateModalOpen(false);
+          }}
+        >
+          <div
+            className="private-repo-modal"
+            style={{ backgroundColor: theme.cardBackground }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <svg className="private-repo-lock" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" strokeWidth="2"/>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+            </svg>
+            <h3 className="private-repo-title" style={{ color: theme.text }}>
+              {t("projects.privateRepoTitle")}
+            </h3>
+            <p className="private-repo-message" style={{ color: theme.secondaryText }}>
+              {t("projects.privateRepo")}
+            </p>
+            <button
+              className="private-repo-btn"
+              style={{ color: theme.imageHighlight, borderColor: theme.imageHighlight }}
+              onClick={() => setPrivateModalOpen(false)}
+            >
+              {t("projects.close")}
+            </button>
+          </div>
         </div>,
         document.body
       )}

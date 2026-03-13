@@ -26,7 +26,10 @@
     "header": "O Que Faço?"
   },
   "projects": {
-    "createdOn": "Criado em"
+    "createdOn": "Criado em",
+    "privateRepoTitle": "Repositório Privado",
+    "privateRepo": "Este repositório é privado e não pode ser acedido publicamente.",
+    "close": "Fechar"
   },
   "contact": {
     "loadingResume": "A carregar CV...",

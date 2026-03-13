@@ -26,7 +26,10 @@
     "header": "What I Do?"
   },
   "projects": {
-    "createdOn": "Created in"
+    "createdOn": "Created in",
+    "privateRepoTitle": "Private Repository",
+    "privateRepo": "This repository is private and cannot be accessed publicly.",
+    "close": "Close"
   },
   "contact": {
     "loadingResume": "Loading resume...",

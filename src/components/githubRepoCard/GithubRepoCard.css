@@ -53,6 +53,59 @@
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
 }
 
+.private-repo-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-8) var(--space-10);
+  border-radius: var(--space-3);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  max-width: 360px;
+  width: 90%;
+  text-align: center;
+  gap: var(--space-4);
+}
+
+.private-repo-lock {
+  width: 40px;
+  height: 40px;
+  color: #06B6D4;
+  flex-shrink: 0;
+}
+
+.private-repo-title {
+  font-family: var(--font-family);
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  margin: 0;
+}
+
+.private-repo-message {
+  font-family: var(--font-family);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.private-repo-btn {
+  margin-top: var(--space-2);
+  padding: var(--space-2) var(--space-6);
+  background: transparent;
+  border: 1px solid;
+  border-radius: var(--space-2);
+  font-family: var(--font-family);
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  cursor: pointer;
+  transition: background var(--transition-base), color var(--transition-base);
+}
+
+.private-repo-btn:hover {
+  background: #06B6D4;
+  color: #0F172A;
+}
+
 .repo-card-div:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
