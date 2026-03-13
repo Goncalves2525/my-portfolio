@@ -422,7 +422,7 @@ const projects = {
       title: "Projetos Pessoais",
       projects: [
         {
-          id: "1",
+          id: "4",
           name: "My Portolfio",
           createdAt: "2026",
           url: "https://github.com/Goncalves2525/my-portfolio",
@@ -447,7 +447,7 @@ const projects = {
           ],
         },
         {
-          id: "2",
+          id: "3",
           name: "Gestor-QR",
           createdAt: "2025",
           url: "https://github.com/Goncalves2525/gestor-qr",
@@ -480,7 +480,7 @@ const projects = {
           ],
         },
         {
-          id: "3",
+          id: "2",
           name: "BMI Calculater",
           createdAt: "2025",
           url: "https://github.com/Goncalves2525/bmi-calculater-flutter",
@@ -497,7 +497,7 @@ const projects = {
           ],
         },
         {
-          id: "4",
+          id: "1",
           name: "Flash Chat",
           createdAt: "2025",
           url: "https://github.com/Goncalves2525/flash-chat-flutter",
@@ -523,7 +523,7 @@ const projects = {
       title: "Projetos Académicos",
       projects: [
         {
-          id: "1",
+          id: "5",
           name: "Sistema de Gestão de Consultas Cirúrgicas e Recursos",
           createdAt: "2024",
           description:
@@ -548,7 +548,7 @@ const projects = {
           ],
         },
         {
-          id: "2",
+          id: "4",
           name: "Sistema de Gestão de Aquisição de Talentos",
           createdAt: "2024",
           description:
@@ -599,7 +599,7 @@ const projects = {
           ],
         },
         {
-          id: "4",
+          id: "2",
           name: "Sistema de Gestão Imobiliária",
           createdAt: "2023",
           description:
@@ -614,7 +614,7 @@ const projects = {
           ],
         },
         {
-          id: "5",
+          id: "1",
           name: "Simulação Epidemiológica",
           createdAt: "2022",
           description:
