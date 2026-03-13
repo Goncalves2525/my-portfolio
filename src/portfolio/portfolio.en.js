@@ -431,6 +431,56 @@ const projects = {
       title: "Personal Projects",
       projects: [
         {
+          id: "6",
+          name: "Painpoint",
+          createdAt: "2026",
+          url: "https://github.com/Goncalves2525/painpoint",
+          isPrivate: true,
+          description:
+            "An AI-powered research tool that finds real-world problems worth solving and generates business ideas.",
+          image: "painpoint.gif",
+          categories: ["AI", "Web", "Mobile", "DevOps"],
+          isFork: false,
+          languages: [
+            {
+              name: "Turborepo",
+              iconifyClass: "material-icon-theme:turborepo",
+            },
+            {
+              name: "TypeScript",
+              iconifyClass: "logos:typescript-icon",
+            },
+            {
+              name: "React Native",
+              iconifyClass: "devicon:reactnative-wordmark",
+            },
+            {
+              name: "Next.js",
+              iconifyClass: "devicon:nextjs",
+            },
+            {
+              name: "Expo",
+              iconifyClass: "logos:expo",
+            },
+            {
+              name: "Github Actions",
+              iconifyClass: "devicon:githubactions",
+            },
+            {
+              name: "Supabase",
+              iconifyClass: "devicon:supabase",
+            },
+            {
+              name: "Vercel",
+              iconifyClass: "devicon:vercel",
+            },
+            {
+              name: "Claude API",
+              iconifyClass: "logos:claude-icon",
+            },
+          ],
+        },
+        {
           id: "5",
           name: "OS Digger",
           createdAt: "2026",

@@ -191,6 +191,12 @@
   border: 1px solid #9c27b066;
 }
 
+.category-ai {
+  background-color: #d4a01733;
+  color: #d4a017;
+  border: 1px solid #d4a01766;
+}
+
 .repo-svg {
   margin-right: 0.5rem;
   min-width: 16px;
