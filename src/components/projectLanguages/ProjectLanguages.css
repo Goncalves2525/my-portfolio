@@ -12,6 +12,31 @@
   margin-right: var(--space-4);
   margin-bottom: 0;
   font-family: var(--font-family);
+  position: relative;
+  cursor: pointer;
+}
+
+.software-skill-inline-languages[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 4px 8px;
+  background: #1E293B;
+  color: #F1F5F9;
+  font-size: 0.75rem;
+  font-family: var(--font-family);
+  white-space: nowrap;
+  border-radius: 4px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  margin-bottom: 4px;
+}
+
+.software-skill-inline-languages[data-tooltip]:hover::after {
+  opacity: 1;
 }
 
 @media (max-width: 768px) {
