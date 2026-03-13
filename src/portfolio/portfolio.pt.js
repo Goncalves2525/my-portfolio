@@ -499,23 +499,6 @@ const projects = {
         },
         {
           id: "2",
-          name: "BMI Calculater",
-          createdAt: "2025",
-          url: "https://github.com/Goncalves2525/bmi-calculater-flutter",
-          description:
-            "Uma calculadora de IMC (Índice de Massa Corporal) simples e elegante construída com Flutter.",
-          image: "bmi.gif",
-          categories: ["Mobile"],
-          isFork: false,
-          languages: [
-            {
-              name: "Flutter",
-              iconifyClass: "devicon:flutter",
-            },
-          ],
-        },
-        {
-          id: "1",
           name: "Flash Chat",
           createdAt: "2025",
           url: "https://github.com/Goncalves2525/flash-chat-flutter",
@@ -535,6 +518,23 @@ const projects = {
             },
           ],
         },
+        {
+          id: "1",
+          name: "BMI Calculater",
+          createdAt: "2025",
+          url: "https://github.com/Goncalves2525/bmi-calculater-flutter",
+          description:
+            "Uma calculadora de IMC (Índice de Massa Corporal) simples e elegante construída com Flutter.",
+          image: "bmi.gif",
+          categories: ["Mobile"],
+          isFork: false,
+          languages: [
+            {
+              name: "Flutter",
+              iconifyClass: "devicon:flutter",
+            },
+          ],
+        }
       ],
     },
     {
