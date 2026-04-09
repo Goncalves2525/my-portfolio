@@ -128,13 +128,13 @@ const skills = {
             color: "#1488C6",
           },
         },
-        // {
-        //   skillName: "Kubernetes",
-        //   fontAwesomeClassname: "simple-icons:kubernetes",
-        //   style: {
-        //     color: "#326CE5",
-        //   },
-        // },
+        {
+          skillName: "Kubernetes",
+          fontAwesomeClassname: "simple-icons:kubernetes",
+          style: {
+            color: "#326CE5",
+          },
+        },
         // {
         //   skillName: "AWS",
         //   fontAwesomeClassname: "simple-icons:amazonaws",
@@ -307,6 +307,14 @@ const mainCertifications = {
 
 const otherCertifications = {
   certifications: [
+    {
+      title: "Kubernetes",
+      subtitle: "KodeKloud",
+      logo_path: "kodekloud.png",
+      certificate_link:
+        "https://learn.kodekloud.com/user/certificate/6399e954-3eff-4c5f-b529-84b09e116ba9",
+      alt_name: "KodeKloud",
+    },
     {
       title: "Docker",
       subtitle: "KodeKloud",
