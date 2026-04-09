@@ -107,7 +107,7 @@ const skills = {
       skills: [
         "⚡ Configuring and managing Linux servers for production environments",
         "⚡ Building CI/CD pipelines with GitHub Actions for automated testing and deployment",
-        "⚡ Containerizing applications with Docker",
+        "⚡ Orchestration of containers using Docker and Kubernetes",
       ],
       softwareSkills: [
         {
