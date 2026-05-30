@@ -9,7 +9,7 @@ const settings = {
 const seo = {
   title: "Ricardo's Portfolio",
   description:
-    "System Administrator and aspiring DevOps engineer with experience in Docker, Kubernetes, Terraform, and CI/CD. Based in Porto, Portugal.",
+    "Software & DevOps Engineer building custom software solutions for startups and small businesses. Full-stack development, cloud infrastructure and CI/CD with Docker, Kubernetes and Terraform. Based in Porto, Portugal.",
   og: {
     title: "Ricardo Gonçalves Portfolio",
     type: "website",
@@ -23,7 +23,7 @@ const greeting = {
   logo_name: "Ricardo Gonçalves",
   nickname: "",
   subTitle:
-    "I currently work as a System Administrator and I'm learning DevOps concepts. I've been exploring technologies such as Docker, Kubernetes, Terraform, Ansible, CI/CD with GitHub Actions, and monitoring with Prometheus. I believe that combining system knowledge with modern DevOps practices is essential to building scalable and efficient solutions.",
+    "I'm a Software & DevOps Engineer who builds custom software solutions for startups and small businesses. I help turn ideas into reliable, scalable products — without the overhead of a full development team. From project management and full-stack development to cloud deployment, I handle the whole delivery process: web applications and internal tools, CRM and business process automation, cloud infrastructure (Docker, Kubernetes, CI/CD) and API integrations. If off-the-shelf software doesn't solve your problem, let's build something that grows with your business.",
   resumeLink:
     "https://drive.google.com/file/d/1IsOnky1f_R_cJbx0NlGebK3q8dOECcMR/view?usp=drive_link",
   portfolio_repository: "https://github.com/ashutosh1919/masterPortfolio",
@@ -102,49 +102,6 @@ const socialMediaLinks = [
 const skills = {
   data: [
     {
-      title: "DevOps",
-      fileName: "CloudInfraImg",
-      skills: [
-        "⚡ Configuring and managing Linux servers for production environments",
-        "⚡ Building CI/CD pipelines with GitHub Actions for automated testing and deployment",
-        "⚡ Orchestration of containers using Docker and Kubernetes",
-      ],
-      softwareSkills: [
-        {
-          skillName: "Linux",
-          fontAwesomeClassname: "flat-color-icons:linux",
-        },
-        {
-          skillName: "Github Actions",
-          fontAwesomeClassname: "devicon:githubactions",
-          style: {
-            color: "#4285F4",
-          },
-        },
-        {
-          skillName: "Docker",
-          fontAwesomeClassname: "simple-icons:docker",
-          style: {
-            color: "#1488C6",
-          },
-        },
-        {
-          skillName: "Kubernetes",
-          fontAwesomeClassname: "simple-icons:kubernetes",
-          style: {
-            color: "#326CE5",
-          },
-        },
-        // {
-        //   skillName: "AWS",
-        //   fontAwesomeClassname: "simple-icons:amazonaws",
-        //   style: {
-        //     color: "#FF9900",
-        //   },
-        // },
-      ],
-    },
-    {
       title: "Full Stack Development",
       fileName: "FullStackImg",
       skills: [
@@ -199,6 +156,54 @@ const skills = {
           skillName: "Claude Code",
           fontAwesomeClassname: "material-icon-theme:claude",
         },
+      ],
+    },
+    {
+      title: "DevOps",
+      fileName: "CloudInfraImg",
+      skills: [
+        "⚡ Configuring and managing Linux servers for production environments",
+        "⚡ Building CI/CD pipelines with GitHub Actions for automated testing and deployment",
+        "⚡ Orchestration of containers using Docker and Kubernetes",
+        "⚡ Provisioning cloud infrastructure as code with Terraform",
+      ],
+      softwareSkills: [
+        {
+          skillName: "Linux",
+          fontAwesomeClassname: "flat-color-icons:linux",
+        },
+        {
+          skillName: "Github Actions",
+          fontAwesomeClassname: "devicon:githubactions",
+          style: {
+            color: "#4285F4",
+          },
+        },
+        {
+          skillName: "Docker",
+          fontAwesomeClassname: "simple-icons:docker",
+          style: {
+            color: "#1488C6",
+          },
+        },
+        {
+          skillName: "Kubernetes",
+          fontAwesomeClassname: "simple-icons:kubernetes",
+          style: {
+            color: "#326CE5",
+          },
+        },
+        {
+          skillName: "Terraform",
+          fontAwesomeClassname: "devicon:terraform",
+        },
+        // {
+        //   skillName: "AWS",
+        //   fontAwesomeClassname: "simple-icons:amazonaws",
+        //   style: {
+        //     color: "#FF9900",
+        //   },
+        // },
       ],
     },
   ],
@@ -386,13 +391,25 @@ const experience = {
   title: "Experience",
   subtitle: "Work and Internship",
   description:
-    "I currently work as a System Administrator in the Portuguese Army, managing servers and network infrastructure. I also completed an internship as a Full Stack Developer, building web and mobile applications.",
+    "I'm an independent Software & DevOps Engineer, building custom software solutions for startups and small businesses — from full-stack development to cloud infrastructure. I also bring experience as a System Administrator in the Portuguese Army and as a Full Stack Developer.",
   header_image_path: "experience.svg",
   sections: [
     {
       title: "Work",
       work: true,
       experiences: [
+        {
+          title: "Software & DevOps Engineer",
+          company: "Self-employed",
+          company_url:
+            "https://www.linkedin.com/in/ricardo-gon%C3%A7alves-83643b21a/",
+          logo_path: "ricardo.svg",
+          duration: "March 2026 - Present",
+          location: "Porto, Portugal · Remote",
+          description:
+            "Building custom software solutions for startups and small businesses — from planning and full-stack development to cloud deployment. I handle the full delivery process: web applications and internal tools, CRM and business process automation, cloud infrastructure (Docker, Kubernetes, CI/CD) and system integration with API development.",
+          color: "#000000",
+        },
         {
           title: "System Administrator",
           company: "Portuguese Army",
@@ -512,7 +529,7 @@ const projects = {
           createdAt: "2026",
           url: "https://github.com/Goncalves2525/my-portfolio",
           description:
-            "Personal portfolio website showcasing my skills, projects, and professional experience as a Computer Engineering student and System Administrator.",
+            "Personal portfolio website showcasing my skills, projects, and professional experience as a Software & DevOps Engineer.",
           image: "portfolio-site.png",
           categories: ["Web"],
           isFork: false,
@@ -757,7 +774,7 @@ const contactPageData = {
     title: "Contact Me",
     profile_image_path: "ricardo.svg",
     description:
-      "Feel free to reach out to me for any opportunities or collaborations in DevOps and Web Development. I'll get back to you as soon as possible!",
+      "Feel free to reach out if you need custom software for your startup or business, or for any collaboration in full-stack development and DevOps. I'll get back to you as soon as possible!",
   },
   blogSection: {
     title: "",

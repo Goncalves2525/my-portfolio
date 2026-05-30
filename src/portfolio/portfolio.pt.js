@@ -9,7 +9,7 @@ const settings = {
 const seo = {
   title: "Portfólio do Ricardo",
   description:
-    "Administrador de Sistemas e aspirante a engenheiro DevOps com experiência em Docker, Kubernetes, Terraform e CI/CD. Baseado no Porto, Portugal.",
+    "Software & DevOps Engineer especializado em soluções de software à medida para startups e PMEs. Desenvolvimento full-stack, infraestrutura cloud e CI/CD com Docker, Kubernetes e Terraform. Baseado no Porto, Portugal.",
   og: {
     title: "Portfólio Ricardo Gonçalves",
     type: "website",
@@ -23,7 +23,7 @@ const greeting = {
   logo_name: "Ricardo Gonçalves",
   nickname: "",
   subTitle:
-    "Atualmente trabalho como Administrador de Sistemas e estou a aprender conceitos DevOps. Tenho explorado tecnologias como Docker, Kubernetes, Terraform, Ansible, CI/CD com GitHub Actions e monitorização com Prometheus. Acredito que combinar conhecimento de sistemas com práticas modernas de DevOps é essencial para construir soluções escaláveis e eficientes.",
+    "Sou Software & DevOps Engineer e construo soluções de software à medida para startups e pequenas e médias empresas. Ajudo a transformar ideias em produtos fiáveis e escaláveis — sem o custo de uma equipa de desenvolvimento completa. Desde a gestão de projeto e desenvolvimento full-stack até ao deploy na cloud, trato de todo o processo de entrega: aplicações web e ferramentas internas, CRM e automação de processos de negócio, infraestrutura cloud (Docker, Kubernetes, CI/CD) e integração de APIs. Se o software pronto a usar não resolve o teu problema, vamos construir algo que cresce com o teu negócio.",
   resumeLink:
     "https://drive.google.com/file/d/1IsOnky1f_R_cJbx0NlGebK3q8dOECcMR/view?usp=drive_link",
   portfolio_repository: "https://github.com/ashutosh1919/masterPortfolio",
@@ -93,49 +93,6 @@ const socialMediaLinks = [
 const skills = {
   data: [
     {
-      title: "DevOps",
-      fileName: "CloudInfraImg",
-      skills: [
-        "⚡ Configuração e gestão de servidores Linux para ambientes de produção",
-        "⚡ Construção de pipelines CI/CD com GitHub Actions para testes e deploy automatizados",
-        "⚡ Orquestação de containers com Docker e Kubernetes",
-      ],
-      softwareSkills: [
-        {
-          skillName: "Linux",
-          fontAwesomeClassname: "flat-color-icons:linux",
-        },
-        {
-          skillName: "Github Actions",
-          fontAwesomeClassname: "devicon:githubactions",
-          style: {
-            color: "#4285F4",
-          },
-        },
-        {
-          skillName: "Docker",
-          fontAwesomeClassname: "simple-icons:docker",
-          style: {
-            color: "#1488C6",
-          },
-        },
-        {
-          skillName: "Kubernetes",
-          fontAwesomeClassname: "simple-icons:kubernetes",
-          style: {
-            color: "#326CE5",
-          },
-        },
-        // {
-        //   skillName: "AWS",
-        //   fontAwesomeClassname: "simple-icons:amazonaws",
-        //   style: {
-        //     color: "#FF9900",
-        //   },
-        // },
-      ],
-    },
-    {
       title: "Desenvolvimento Full Stack",
       fileName: "FullStackImg",
       skills: [
@@ -190,6 +147,54 @@ const skills = {
           skillName: "Claude Code",
           fontAwesomeClassname: "material-icon-theme:claude",
         },
+      ],
+    },
+    {
+      title: "DevOps",
+      fileName: "CloudInfraImg",
+      skills: [
+        "⚡ Configuração e gestão de servidores Linux para ambientes de produção",
+        "⚡ Construção de pipelines CI/CD com GitHub Actions para testes e deploy automatizados",
+        "⚡ Orquestação de containers com Docker e Kubernetes",
+        "⚡ Provisionamento de infraestrutura cloud como código com Terraform",
+      ],
+      softwareSkills: [
+        {
+          skillName: "Linux",
+          fontAwesomeClassname: "flat-color-icons:linux",
+        },
+        {
+          skillName: "Github Actions",
+          fontAwesomeClassname: "devicon:githubactions",
+          style: {
+            color: "#4285F4",
+          },
+        },
+        {
+          skillName: "Docker",
+          fontAwesomeClassname: "simple-icons:docker",
+          style: {
+            color: "#1488C6",
+          },
+        },
+        {
+          skillName: "Kubernetes",
+          fontAwesomeClassname: "simple-icons:kubernetes",
+          style: {
+            color: "#326CE5",
+          },
+        },
+        {
+          skillName: "Terraform",
+          fontAwesomeClassname: "devicon:terraform",
+        },
+        // {
+        //   skillName: "AWS",
+        //   fontAwesomeClassname: "simple-icons:amazonaws",
+        //   style: {
+        //     color: "#FF9900",
+        //   },
+        // },
       ],
     },
   ],
@@ -377,13 +382,25 @@ const experience = {
   title: "Experiência",
   subtitle: "Trabalho e Estágio",
   description:
-    "Atualmente trabalho como Administrador de Sistemas no Exército Português, gerindo servidores e infraestrutura de rede. Também completei um estágio como Desenvolvedor Full Stack, construindo aplicações web e mobile.",
+    "Sou Software & DevOps Engineer independente e construo soluções de software à medida para startups e PMEs — do desenvolvimento full-stack à infraestrutura cloud. Tenho também experiência como Administrador de Sistemas no Exército Português e como Desenvolvedor Full Stack.",
   header_image_path: "experience.svg",
   sections: [
     {
       title: "Trabalho",
       work: true,
       experiences: [
+        {
+          title: "Software & DevOps Engineer",
+          company: "Trabalho Independente",
+          company_url:
+            "https://www.linkedin.com/in/ricardo-gon%C3%A7alves-83643b21a/",
+          logo_path: "ricardo.svg",
+          duration: "Março 2026 - Presente",
+          location: "Porto, Portugal · Remoto",
+          description:
+            "Construo soluções de software à medida para startups e PMEs — desde o planeamento e desenvolvimento full-stack até ao deploy na cloud. Trato de todo o processo de entrega: aplicações web e ferramentas internas, CRM e automação de processos de negócio, infraestrutura cloud (Docker, Kubernetes, CI/CD) e integração de sistemas com desenvolvimento de APIs.",
+          color: "#000000",
+        },
         {
           title: "Administrador de Sistemas",
           company: "Exército Português",
@@ -503,7 +520,7 @@ const projects = {
           createdAt: "2026",
           url: "https://github.com/Goncalves2525/my-portfolio",
           description:
-            "Website de portefólio pessoal que apresenta as minhas competências, projetos e experiência profissional como estudante de Engenharia Informática e Administrador de Sistemas.",
+            "Website de portefólio pessoal que apresenta as minhas competências, projetos e experiência profissional como Software & DevOps Engineer.",
           image: "portfolio-site.png",
           categories: ["Web"],
           isFork: false,
@@ -748,7 +765,7 @@ const contactPageData = {
     title: "Contacte-me",
     profile_image_path: "ricardo.svg",
     description:
-      "Sinta-se à vontade para me contactar para quaisquer oportunidades ou colaborações em DevOps e Desenvolvimento Web. Responderei assim que possível!",
+      "Sinta-se à vontade para me contactar se precisar de software à medida para a sua startup ou empresa, ou para qualquer colaboração em desenvolvimento full-stack e DevOps. Responderei assim que possível!",
   },
   blogSection: {
     title: "",

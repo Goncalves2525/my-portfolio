@@ -27,22 +27,11 @@ class ExperienceCard extends Component {
             style={{
               width: 20,
               height: 20,
-              backgroundColor: `${theme.headerColor}`,
+              backgroundColor: `${theme.imageHighlight || theme.headerColor}`,
               borderRadius: 50,
               zIndex: 100,
             }}
           />
-          {index !== totalCards - 1 && (
-            <div
-              style={{
-                height: 190,
-                width: 2,
-                backgroundColor: `${theme.headerColor}`,
-                position: "absolute",
-                marginTop: 20,
-              }}
-            />
-          )}
         </div>
         <Fade right duration={800} distance="20px">
           <div style={{ display: "flex", flexDirection: "row" }}>
