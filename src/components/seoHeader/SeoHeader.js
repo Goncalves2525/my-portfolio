@@ -104,9 +104,19 @@ function SeoHeader() {
     publisher: { "@id": baseUrl + "#person" },
   };
 
+  const webpage = {
+    "@type": "ProfilePage",
+    "@id": baseUrl + "#webpage",
+    url: baseUrl,
+    name: seo.title,
+    isPartOf: { "@id": baseUrl + "#website" },
+    mainEntity: { "@id": baseUrl + "#person" },
+    inLanguage: language,
+  };
+
   const data = {
     "@context": "https://schema.org",
-    "@graph": [person, website],
+    "@graph": [person, website, webpage],
   };
 
   const og = (seo && seo.og) || {};
