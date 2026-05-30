@@ -42,7 +42,12 @@
     <meta name="twitter:image" content="https://ricardogoncalves.dev/og-image.jpg" />
     <meta name="twitter:image:alt" content="Ricardo Gonçalves — Software & DevOps Engineer" />
 
-    <link rel="canonical" href="https://ricardogoncalves.dev/" />
+    <!--
+      No static canonical here on purpose: this SPA serves the same index.html
+      for every route, so a hardcoded canonical would point all pages at "/".
+      The canonical is set per-route by react-helmet (see SeoHeader.js) and
+      becomes part of the static HTML once react-snap pre-renders each route.
+    -->
 
     <!-- Structured data (read by crawlers that don't execute JS) -->
     <script type="application/ld+json">

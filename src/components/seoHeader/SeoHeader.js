@@ -122,12 +122,32 @@ function SeoHeader() {
   const og = (seo && seo.og) || {};
   const ogLocale = og.locale || (language === "pt" ? "pt_PT" : "en_US");
 
+  // Self-referencing canonical per route. The static index.html serves every
+  // route, so the canonical must be derived from the current path — otherwise
+  // every page declares the homepage as its canonical and Google drops them as
+  // "Alternate page with proper canonical tag". /home is a duplicate of /.
+  let canonicalPath = "/";
+  if (
+    typeof window !== "undefined" &&
+    window.location &&
+    window.location.pathname
+  ) {
+    canonicalPath = window.location.pathname;
+    if (canonicalPath === "/home" || canonicalPath === "/home/") {
+      canonicalPath = "/";
+    } else if (canonicalPath.length > 1 && canonicalPath.endsWith("/")) {
+      canonicalPath = canonicalPath.slice(0, -1);
+    }
+  }
+  const origin = baseUrl.replace(/\/$/, "");
+  const canonicalUrl = canonicalPath === "/" ? baseUrl : origin + canonicalPath;
+
   return (
     <Helmet htmlAttributes={{ lang: language }}>
       <title>{seo.title}</title>
       <meta name="description" content={seo.description} />
       <meta name="keywords" content={seo.keywords} />
-      <link rel="canonical" href={baseUrl} />
+      <link rel="canonical" href={canonicalUrl} />
       <meta
         name="robots"
         content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
@@ -137,7 +157,7 @@ function SeoHeader() {
       <meta property="og:title" content={og.title} />
       <meta property="og:description" content={og.description} />
       <meta property="og:type" content={og.type} />
-      <meta property="og:url" content={og.url} />
+      <meta property="og:url" content={canonicalUrl} />
       <meta property="og:image" content={og.image} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
