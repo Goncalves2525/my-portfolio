@@ -1,15 +1,32 @@
 {
-  "name": "Ricardo Gonçalves — Portfolio",
+  "id": "/",
+  "name": "Ricardo Gonçalves — Software & DevOps Engineer",
   "short_name": "Ricardo G.",
+  "description": "Software & DevOps Engineer building custom software for startups and small businesses.",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["portfolio", "business", "productivity"],
   "icons": [
     {
-      "src": "/web-app-manifest-192x192.png",
+      "src": "/icons/logo192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/logo512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/web-app-manifest-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "/web-app-manifest-512x512.png",
+      "src": "/icons/web-app-manifest-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
@@ -18,5 +35,6 @@
   "theme_color": "#0F172A",
   "background_color": "#0F172A",
   "display": "standalone",
-  "start_url": "/"
+  "start_url": "/",
+  "scope": "/"
 }

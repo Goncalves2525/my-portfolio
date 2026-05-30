@@ -1,0 +1,42 @@
+<svg width="1200" height="1200" viewBox="0 0 1200 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#1E293B"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1040 120) rotate(120) scale(420)">
+      <stop offset="0" stop-color="#06B6D4" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#06B6D4" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#06B6D4"/>
+    </linearGradient>
+  </defs>
+
+  <!-- content centered in the 1200x1200 canvas; center crop to 1200x630 extracts this band -->
+  <g transform="translate(0,285)">
+    <rect width="1200" height="630" fill="url(#bg)"/>
+    <rect width="1200" height="630" fill="url(#glow)"/>
+    <rect x="20" y="20" width="1160" height="590" rx="28" fill="none" stroke="#334155" stroke-opacity="0.5" stroke-width="2"/>
+
+    <!-- accent bar -->
+    <rect x="90" y="232" width="8" height="160" rx="4" fill="url(#accent)"/>
+
+    <!-- domain / eyebrow -->
+    <text x="92" y="150" font-family="'SF Mono','DejaVu Sans Mono',Menlo,monospace" font-size="26" letter-spacing="1" fill="#06B6D4">&#60;/&#62; ricardogoncalves.dev</text>
+
+    <!-- name -->
+    <text x="118" y="278" font-family="'Helvetica Neue',Arial,sans-serif" font-size="70" font-weight="700" letter-spacing="-1.5" fill="#F1F5F9">Ricardo Gon&#231;alves</text>
+
+    <!-- role -->
+    <text x="120" y="340" font-family="'Helvetica Neue',Arial,sans-serif" font-size="42" font-weight="600" letter-spacing="-0.5" fill="#22D3EE">Software &#38; DevOps Engineer</text>
+
+    <!-- tagline -->
+    <text x="120" y="394" font-family="'Helvetica Neue',Arial,sans-serif" font-size="28" font-weight="400" fill="#94A3B8">Custom software for startups &#38; small businesses</text>
+
+    <!-- tech stack -->
+    <text x="120" y="492" font-family="'SF Mono','DejaVu Sans Mono',Menlo,monospace" font-size="23" letter-spacing="0.5" fill="#CBD5E1">React  &#183;  Next.js  &#183;  Node.js  &#183;  Docker  &#183;  Kubernetes  &#183;  Terraform</text>
+    <rect x="120" y="512" width="660" height="2" rx="1" fill="#334155" fill-opacity="0.6"/>
+  </g>
+</svg>

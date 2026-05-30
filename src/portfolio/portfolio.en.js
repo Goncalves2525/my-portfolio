@@ -7,13 +7,23 @@ const settings = {
 
 //SEO Related settings
 const seo = {
-  title: "Ricardo's Portfolio",
+  title: "Ricardo Gonçalves — Software & DevOps Engineer | Porto, Portugal",
   description:
-    "Software & DevOps Engineer building custom software solutions for startups and small businesses. Full-stack development, cloud infrastructure and CI/CD with Docker, Kubernetes and Terraform. Based in Porto, Portugal.",
+    "Software & DevOps Engineer in Porto, Portugal. I build custom software for startups and small businesses — web apps, business automation, cloud infrastructure and CI/CD.",
+  keywords:
+    "Ricardo Gonçalves, Software Engineer, DevOps Engineer, Full Stack Developer, freelance software developer, custom software, startups, SMEs, Porto, Portugal, React, Next.js, TypeScript, Node.js, Docker, Kubernetes, Terraform, CI/CD, cloud infrastructure, web development",
+  image: "https://ricardogoncalves.dev/og-image.jpg",
   og: {
-    title: "Ricardo Gonçalves Portfolio",
+    title: "Ricardo Gonçalves — Software & DevOps Engineer",
+    description:
+      "I build custom software for startups and small businesses — web apps, business automation, cloud infrastructure and CI/CD. Based in Porto, Portugal.",
     type: "website",
     url: "https://ricardogoncalves.dev/",
+    site_name: "Ricardo Gonçalves",
+    image: "https://ricardogoncalves.dev/og-image.jpg",
+    image_alt: "Ricardo Gonçalves — Software & DevOps Engineer",
+    locale: "en_US",
+    locale_alternate: "pt_PT",
   },
 };
 
