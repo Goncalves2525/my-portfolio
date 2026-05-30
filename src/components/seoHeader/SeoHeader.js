@@ -37,9 +37,12 @@ function SeoHeader() {
     ? mailMedia.link.substring("mailto:".length)
     : undefined;
 
-  let job = experience.sections
-    ?.find((section) => section.work)
-    ?.experiences?.at(0);
+  let workSection =
+    experience.sections &&
+    experience.sections.find((section) => section.work);
+  let job =
+    (workSection && workSection.experiences && workSection.experiences[0]) ||
+    undefined;
 
   let knowsAbout = [];
   if (skills && skills.data) {
