@@ -12,23 +12,14 @@ import "./assets/font-awesome/css/all.css";
 
 const engine = new Styletron();
 
-const app = (
+ReactDOM.render(
   <StyletronProvider value={engine}>
     <BaseProvider theme={LightTheme}>
       <App />
     </BaseProvider>
-  </StyletronProvider>
+  </StyletronProvider>,
+  document.getElementById("root")
 );
-
-const rootElement = document.getElementById("root");
-
-// react-snap pre-renders each route to static HTML; when that HTML is present
-// we hydrate it instead of re-rendering from scratch.
-if (rootElement.hasChildNodes()) {
-  ReactDOM.hydrate(app, rootElement);
-} else {
-  ReactDOM.render(app, rootElement);
-}
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

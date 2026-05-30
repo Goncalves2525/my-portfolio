@@ -25,8 +25,7 @@
     <meta property="og:title" content="Ricardo Gonçalves — Software & DevOps Engineer" />
     <meta property="og:description" content="I build custom software for startups and small businesses — web apps, business automation, cloud infrastructure and CI/CD. Based in Porto, Portugal." />
     <meta property="og:type" content="website" />
-    <!-- og:url is injected per-route by react-helmet (see SeoHeader.js) and
-         captured into each page's static HTML by react-snap. -->
+    <!-- og:url is set per-route by react-helmet (see SeoHeader.js). -->
     <meta property="og:image" content="https://ricardogoncalves.dev/og-image.jpg" />
     <meta property="og:image:secure_url" content="https://ricardogoncalves.dev/og-image.jpg" />
     <meta property="og:image:type" content="image/jpeg" />
@@ -45,9 +44,8 @@
 
     <!--
       No static canonical here on purpose: this SPA serves the same index.html
-      for every route, so a hardcoded canonical would point all pages at "/".
-      The canonical is set per-route by react-helmet (see SeoHeader.js) and
-      becomes part of the static HTML once react-snap pre-renders each route.
+      for every route, so a hardcoded canonical would point every page at "/".
+      The canonical is set per-route by react-helmet (see SeoHeader.js).
     -->
 
     <!-- Structured data (read by crawlers that don't execute JS) -->

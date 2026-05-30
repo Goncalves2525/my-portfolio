@@ -5,17 +5,11 @@
   "homepage": "https://ricardogoncalves.dev",
   "scripts": {
     "build": "react-scripts --openssl-legacy-provider build",
-    "postbuild": "react-snap",
     "predeploy": "npm run build",
     "deploy": "gh-pages -b gh-pages -d build",
     "eject": "react-scripts eject",
     "start": "react-scripts --openssl-legacy-provider start",
     "test": "react-scripts test"
-  },
-  "reactSnap": {
-    "include": ["/", "/experience", "/education", "/projects", "/contact"],
-    "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox"],
-    "inlineCss": false
   },
   "dependencies": {
     "apollo-boost": "^0.4.4",
@@ -45,8 +39,7 @@
     "dotenv": "^6.2.0",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
-    "prettier": "2.0.5",
-    "react-snap": "^1.23.0"
+    "prettier": "2.0.5"
   },
   "browserslist": {
     "production": [
