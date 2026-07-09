@@ -261,6 +261,14 @@ const degrees = {
 const mainCertifications = {
   certifications: [
     {
+      title: "Cloud & DevOps",
+      subtitle: "Code for All_",
+      logo_path: "codeforall_logo.jpeg",
+      certificate_link:
+        "https://certificate.codeforall.com/verify/063716de27428?s",
+      alt_name: "Code for All",
+    },
+    {
       title: "CCNA",
       subtitle: "Networking Academy",
       logo_path: "Cisco_logo_blue.svg.png",
